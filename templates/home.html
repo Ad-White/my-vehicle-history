@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
     
-        
-    
     {% for car in cars %}
-    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-        <div class="card-body">
-            <h4 class="card-title text-shadow">{{ car.make }}</h4>
-            <h5 class="card-subtitle mb-2 text-body-secondary">{{ car.model }}</h5>
-            <p class="card-text">Engine Capacity: {{ car.capacity }} L</p>
-            <p class="card-text">Colour: {{ car.colour }}</p>
-            <p class="card-text">Year: {{ car.year }}</p>
-            {% if car.current_owner == "yes" %}
-            <p class="card-text">Current Owner: {{ car.current_owner }}
-                <i class="fa-solid fa-check"></i>
-            </p>
-            {% endif %}
+        {% if car.show_my_car == "yes" %}
+        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card-body">
+                <h4 class="card-title text-shadow">{{ car.make }}</h4>
+                <h5 class="card-subtitle mb-2 text-body-secondary">{{ car.model }}</h5>
+                <p class="card-text">Engine Capacity: {{ car.capacity }} L</p>
+                <p class="card-text">Colour: {{ car.colour }}</p>
+                <p class="card-text">Year: {{ car.year }}</p>
+                {% if car.current_owner == "yes" %}
+                <p class="card-text">Current Owner: {{ car.current_owner }}
+                    <i class="fa-solid fa-check"></i>
+                </p>
+                {% endif %}
+            </div>
         </div>
-    </div>
+        {% endif %}
     {% endfor %}
 
 {% endblock %}

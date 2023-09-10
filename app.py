@@ -96,6 +96,12 @@ def sign_out():
     return redirect(url_for("sign_in"))
 
 
+@app.route("/add_new_vehicle")
+def add_new_vehicle():
+    vehicle_type = mongo.db.vehicles.find().sort("vehicle_type", 1)
+    return render_template("add_new_vehicle.html", vehicle_type=vehicle_type)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
