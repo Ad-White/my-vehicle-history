@@ -98,8 +98,8 @@ def sign_out():
 
 @app.route("/add_new_vehicle")
 def add_new_vehicle():
-    vehicle_type = mongo.db.vehicles.find().sort("vehicle_type", 1)
-    return render_template("add_new_vehicle.html", vehicle_type=vehicle_type)
+    vehicles = mongo.db.vehicles.find().sort("vehicle_type", 1)
+    return render_template("add_new_vehicle.html", vehicles=vehicles)
 
 
 if __name__ == "__main__":
