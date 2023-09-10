@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     
+    <h3>User's Vehicles</h3>
+
     {% for car in cars %}
         {% if car.show_my_car == "yes" %}
         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
@@ -15,6 +17,7 @@
                     <i class="fa-solid fa-check"></i>
                 </p>
                 {% endif %}
+                <p><em>by: {{ car.created_by }}</em></p>
             </div>
         </div>
         {% endif %}

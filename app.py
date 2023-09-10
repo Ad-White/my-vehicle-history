@@ -96,8 +96,26 @@ def sign_out():
     return redirect(url_for("sign_in"))
 
 
-@app.route("/add_new_vehicle")
+@app.route("/add_new_vehicle", methods=["GET", "POST"])
 def add_new_vehicle():
+    if request.method == "POST":
+        current_owner = "no" if request.form.get("current_owner") else "yes"
+        show_my_car = "no" if request.form.get("show_my_car") else "yes"
+        vehicle = {
+            "vehicle_type": request.form.get("vehicle_type"),
+            "make": request.form.get("make"),
+            "model": request.form.get("model"),
+            "capacity": request.form.get("capacity"),
+            "year": request.form.get("year"),
+            "colour": request.form.get("colour"),
+            "current_owner": current_owner,
+            "show_my_car": show_my_car,
+            "created_by": session["user"]
+        }
+        mongo.db.cars.insert_one(vehicle)
+        flash("Vehicle Successfully Added")
+        return redirect(url_for("get_vehicles"))
+
     vehicles = mongo.db.vehicles.find().sort("vehicle_type", 1)
     return render_template("add_new_vehicle.html", vehicles=vehicles)
 
