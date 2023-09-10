@@ -19,10 +19,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_cars")
-def get_cars():
+@app.route("/get_vehicles")
+def get_vehicles():
     cars = mongo.db.cars.find()
-    return render_template("cars.html", cars=cars)
+    return render_template("home.html", cars=cars)
 
 
 # registration functionality
