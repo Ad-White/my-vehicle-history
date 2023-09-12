@@ -11,9 +11,12 @@
                         <i class="fa-solid fa-pen"></i>
                         <label for="vehicle_type" class="form-label">Vehicle Type</label>
                         <select id="vehicle_type" name="vehicle_type" class="form-select" aria-label="select vehicle type" required>
-                            <option value="" selected>Select Vehicle Type...</option>
+                            <option value="">Select Vehicle Type...</option>
                             {% for vehicle_type in vehicle_types %}
-                            <option value="{{ vehicle_type.vehicle_type }}">{{ vehicle_type.vehicle_type }}</option>
+                                {% if vehicle_type.vehicle_type == vehicle.vehicle_type %}
+                                    <option value="{{ vehicle_type.vehicle_type }}" selected>{{ vehicle_type.vehicle_type }}</option>
+                                {% else %}
+                                    <option value="{{ vehicle_type.vehicle_type }}">{{ vehicle_type.vehicle_type }}</option>{% endif %}
                             {% endfor %}
                         </select>
                     </div>
@@ -24,7 +27,7 @@
                         <i class="fa-solid fa-pen"></i>
                         <label for="make" class="form-label">Vehicle Make</label>
                         <input type="text" class="form-control" id="make" name="make"
-                        minlength="4" maxlength="25" placeholder="Enter make of vehicle..." required>
+                        minlength="4" maxlength="25" value="{{ vehicle.make }}" placeholder="Enter make of vehicle..." required>
                     </div>
                 </div>
                 <!-- vehicle model -->
@@ -33,7 +36,7 @@
                         <i class="fa-solid fa-pen"></i>
                         <label for="model" class="form-label">Model</label>
                         <input type="text" class="form-control" id="model" name="model"
-                        placeholder="Enter model..." minlength="1" maxlength="25" required>
+                        placeholder="Enter model..." minlength="1" maxlength="25" value="{{ vehicle.model }}" required>
                     </div>
                 </div>
                 <!-- engine capacity -->
@@ -42,7 +45,7 @@
                         <i class="fa-solid fa-pen"></i>
                         <label for="capacity" class="form-label">Engine Capacity (Litres/CC)</label>
                         <input type="number" class="form-control" id="capacity" name="capacity"
-                        min="1" max="9999" step="0.1" value="" required>
+                        min="1" max="9999" step="0.1" value="{{ vehicle.capacity}}" required>
                     </div>
                 </div>
                 <!-- year of manufacture -->
@@ -51,7 +54,7 @@
                         <i class="fa-regular fa-calendar-days"></i>
                         <label for="year" class="form-label">Year Of Manufacture</label>
                         <input type="number" class="form-control" id="year" name="year" min="1885" max="2026"
-                            value="" required>
+                            value="{{ vehicle.year }}" required>
                     </div>
                 </div>
                 <!-- colour -->
@@ -60,14 +63,18 @@
                         <i class="fa-solid fa-palette"></i>
                         <label for="colour" class="form-label">Colour</label>
                         <input type="text" class="form-control" id="colour" name="colour" minlength="3" maxlength="20"
-                            placeholder="Enter Colour..." required>
+                            value="{{ vehicle.colour }}" required>
                     </div>
                 </div>
                 <!-- current owner switch -->
                 <div class="row">
                     <div class="mb-3 form-check form-switch">
                         <label class="form-check-label" for="current_owner">Current Owner</label>
-                        <input class="form-check-input" type="checkbox" role="switch" id="current_owner" name="current_owner">
+                        {% if vehicle.current_owner == "yes" %}
+                            <input class="form-check-input" type="checkbox" role="switch" id="current_owner" name="current_owner" checked>
+                        {% else %}
+                            <input class="form-check-input" type="checkbox" role="switch" id="current_owner" name="current_owner">
+                        {% endif %}
                         <i class="fa-solid fa-key"></i>
                     </div>
                 </div>
@@ -75,14 +82,21 @@
                 <div class="row">
                     <div class="form-check form-switch">
                         <label class="form-check-label" for="show_my_vehicle">Show My Vehicle</label>
-                        <input class="form-check-input" type="checkbox" role="switch" id="show_my_vehicle" name="show_my_vehicle">
+                        {% if vehicle.show_my_vehicle == "yes" %}
+                            <input class="form-check-input" type="checkbox" role="switch" id="show_my_vehicle" name="show_my_vehicle" checked>
+                        {% else %}
+                            <input class="form-check-input" type="checkbox" role="switch" id="show_my_vehicle" name="show_my_vehicle">
+                        {% endif %}
                         <i class="fa-solid fa-car-side"></i>
                     </div>
                 </div>
                 <!-- submit button -->
                 <div class="row">
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Edit Vehicle</button>
+                        <!-- cancel button -->
+                        <a class="btn btn-danger" href="{{ url_for('get_vehicles') }}" role="button">Cancel <i class="fa-regular fa-circle-xmark"></i></a>
+                        <!-- edit button -->
+                        <button class="btn btn-primary" type="submit">Edit Vehicle <i class="fa-solid fa-pen"></i></button>
                     </div>
                 </div>
             </form>
