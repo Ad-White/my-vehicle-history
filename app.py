@@ -99,8 +99,8 @@ def sign_out():
 @app.route("/add_new_vehicle", methods=["GET", "POST"])
 def add_new_vehicle():
     if request.method == "POST":
-        current_owner = "no" if request.form.get("current_owner") else "yes"
-        show_my_car = "no" if request.form.get("show_my_car") else "yes"
+        current_owner = "yes" if request.form.get("current_owner") else "no"
+        show_my_car = "yes" if request.form.get("show_my_car") else "no"
         vehicle = {
             "vehicle_type": request.form.get("vehicle_type"),
             "make": request.form.get("make"),
