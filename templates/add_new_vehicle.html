@@ -11,7 +11,7 @@
                         <i class="fa-solid fa-pen"></i>
                         <label for="vehicle_type" class="form-label">Vehicle Type</label>
                         <select id="vehicle_type" name="vehicle_type" class="form-select" aria-label="select vehicle type" required>
-                            <option selected>Select Vehicle Type...</option>
+                            <option value="" selected>Select Vehicle Type...</option>
                             {% for vehicle in vehicles %}
                             <option value="{{ vehicle.vehicle_type }}">{{ vehicle.vehicle_type }}</option>
                             {% endfor %}
