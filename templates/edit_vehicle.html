@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3>Add New Vehicle</h3>
+    <h3>Edit Vehicle</h3>
 
         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-            <form class="justify-content-center" method="POST" action="{{ url_for('add_new_vehicle') }}">
+            <form class="justify-content-center" method="POST" action="{{ url_for('edit_vehicle', vehicle_id=vehicles._id) }}">
                 <!-- vehicle type -->
                 <div class="row"></div>
                     <div class="mb-3 col-12">
@@ -71,10 +71,10 @@
                         <i class="fa-solid fa-key"></i>
                     </div>
                 </div>
-                <!-- show my vehicle switch -->
+                <!-- show my car switch -->
                 <div class="row">
                     <div class="form-check form-switch">
-                        <label class="form-check-label" for="show_my_car">Show My Vehicle</label>
+                        <label class="form-check-label" for="show_my_vehicle">Show My Vehicle</label>
                         <input class="form-check-input" type="checkbox" role="switch" id="show_my_vehicle" name="show_my_vehicle">
                         <i class="fa-solid fa-car-side"></i>
                     </div>
@@ -82,7 +82,7 @@
                 <!-- submit button -->
                 <div class="row">
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <button class="btn btn-primary" type="submit">Edit Vehicle</button>
                     </div>
                 </div>
             </form>

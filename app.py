@@ -21,8 +21,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_vehicles")
 def get_vehicles():
-    cars = mongo.db.cars.find()
-    return render_template("home.html", cars=cars)
+    vehicles = mongo.db.vehicles.find()
+    return render_template("home.html", vehicles=vehicles)
 
 
 # registration functionality
@@ -100,7 +100,8 @@ def sign_out():
 def add_new_vehicle():
     if request.method == "POST":
         current_owner = "yes" if request.form.get("current_owner") else "no"
-        show_my_car = "yes" if request.form.get("show_my_car") else "no"
+        show_my_vehicle = "yes" if request.form.get(
+            "show_my_vehicle") else "no"
         vehicle = {
             "vehicle_type": request.form.get("vehicle_type"),
             "make": request.form.get("make"),
@@ -109,15 +110,24 @@ def add_new_vehicle():
             "year": request.form.get("year"),
             "colour": request.form.get("colour"),
             "current_owner": current_owner,
-            "show_my_car": show_my_car,
+            "show_my_vehicle": show_my_vehicle,
             "created_by": session["user"]
         }
         mongo.db.cars.insert_one(vehicle)
         flash("Vehicle Successfully Added")
         return redirect(url_for("get_vehicles"))
 
-    vehicles = mongo.db.vehicles.find().sort("vehicle_type", 1)
+    vehicles = mongo.db.vehicle_types.find().sort("vehicle_type", 1)
     return render_template("add_new_vehicle.html", vehicles=vehicles)
+
+
+@app.route("/edit_vehicle/<vehicle_id>", methods=["GET", "POST"])
+def edit_vehicle(vehicle_id):
+    vehicle = mongo.db.vehicles.find_one({"_id": ObjectId(vehicle_id)})
+
+    vehicles = mongo.db.vehicles.find().sort("vehicle_type", 1)
+    return render_template(
+        "edit_vehicle.html", vehicle=vehicle, vehicles=vehicles)
 
 
 if __name__ == "__main__":
