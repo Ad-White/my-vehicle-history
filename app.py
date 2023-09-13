@@ -113,21 +113,21 @@ def add_new_vehicle():
             "show_my_vehicle": show_my_vehicle,
             "created_by": session["user"]
         }
-        mongo.db.cars.insert_one(vehicle)
+        mongo.db.vehicles.insert_one(vehicle)
         flash("Vehicle Successfully Added")
         return redirect(url_for("get_vehicles"))
 
-    vehicles = mongo.db.vehicle_types.find().sort("vehicle_type", 1)
-    return render_template("add_new_vehicle.html", vehicles=vehicles)
+    vehicle_types = mongo.db.vehicle_types.find().sort("vehicle_type", 1)
+    return render_template("add_new_vehicle.html", vehicle_types=vehicle_types)
 
 
 @app.route("/edit_vehicle/<vehicle_id>", methods=["GET", "POST"])
 def edit_vehicle(vehicle_id):
     vehicle = mongo.db.vehicles.find_one({"_id": ObjectId(vehicle_id)})
 
-    vehicles = mongo.db.vehicles.find().sort("vehicle_type", 1)
+    vehicle_types = mongo.db.vehicle_types.find().sort("vehicle_type", 1)
     return render_template(
-        "edit_vehicle.html", vehicle=vehicle, vehicles=vehicles)
+        "edit_vehicle.html", vehicle=vehicle, vehicle_types=vehicle_types)
 
 
 if __name__ == "__main__":
