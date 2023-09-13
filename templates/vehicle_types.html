@@ -2,13 +2,21 @@
 {% block content %}
 
     <h3>Manage Vehicles Types</h3>
+
+    <div class="row">
+        <div class="col-12">
+            <a class="btn btn-primary btn-lg" href="{{ url_for('add_vehicle_type') }}"
+               role="button"><i class="fa-solid fa-plus"></i>  Create Vehicle Type</a>
+        </div>
+    </div>
+
     <div class="row">
         {% for vehicle_type in vehicle_types %}
             <div class="col-md-6">
                 <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div class="card-body">
                         <h5 class="card-title">{{ vehicle_type.vehicle_type }}</h5>
-                        <!-- edit buttons -->
+                        <!-- edit button -->
                         <a class="btn btn-primary" href="" role="button">Edit <i
                                 class="fa-solid fa-pen"></i></a>
                         <!-- delete button -->

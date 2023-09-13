@@ -162,6 +162,19 @@ def get_vehicle_types():
     return render_template("vehicle_types.html", vehicle_types=vehicle_types)
 
 
+@app.route("/add_vehicle_type", methods=["GET", "POST"])
+def add_vehicle_type():
+    if request.method == "POST":
+        vehicle_type = {
+            "vehicle_type": request.form.get("vehicle_type")
+        }
+        mongo.db.vehicle_types.insert_one(vehicle_type)
+        flash("New Vehicle Type Added")
+        return redirect(url_for("get_vehicle_types"))
+
+    return render_template("add_vehicle_types.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

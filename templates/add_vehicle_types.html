@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3>Add Vehicle Type</h3>
+
+        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+            <form class="justify-content-center" method="POST" action="{{ url_for('add_vehicle_type') }}">
+                <!-- vehicle type -->
+                <div class="row">
+                    <div class="mb-3 col-12">
+                        <i class="fa-solid fa-pen"></i>
+                        <label for="vehicle_type" class="form-label">New Vehicle Type</label>
+                        <input type="text" class="form-control" id="vehicle_type" name="vehicle_type"
+                        minlength="3" maxlength="25" required>
+                    </div>
+                </div>
+                <!-- save button -->
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Save <i class="fa-regular fa-floppy-disk"></i></button>
+                    </div>
+                </div>
+                <!-- cancel button -->
+                <div class="row">
+                    <div class="col-12">
+                        <a class="btn btn-danger" href="{{ url_for('get_vehicle_types') }}" role="button">Cancel <i
+                        class="fa-regular fa-circle-xmark"></i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+{% endblock %}
