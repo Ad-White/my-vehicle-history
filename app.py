@@ -191,6 +191,13 @@ def edit_vehicle_type(vehicle_type_id):
     return render_template("edit_vehicle_type.html", vehicle_type=vehicle_type)
 
 
+@app.route("/delete_vehicle_type/<vehicle_type_id>")
+def delete_vehicle_type(vehicle_type_id):
+    mongo.db.vehicle_types.delete_one({"_id": ObjectId(vehicle_type_id)})
+    flash("Vehicle Type Deleted")
+    return redirect(url_for("get_vehicle_types"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
