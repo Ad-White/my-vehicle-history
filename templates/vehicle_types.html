@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3>Manage Vehicles Types</h3>
+    <div class="row">
+        {% for vehicle_type in vehicle_types %}
+            <div class="col-md-6">
+                <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ vehicle_type.vehicle_type }}</h5>
+                        <!-- edit buttons -->
+                        <a class="btn btn-primary" href="" role="button">Edit <i
+                                class="fa-solid fa-pen"></i></a>
+                        <!-- delete button -->
+                        <a class="btn btn-danger btn-sm" href="" role="button">Delete <i
+                                class="fa-solid fa-pen"></i></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

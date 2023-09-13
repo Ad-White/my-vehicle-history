@@ -156,6 +156,12 @@ def delete_vehicle(vehicle_id):
     return redirect(url_for("get_vehicles"))
 
 
+@app.route("/get_vehicle_types")
+def get_vehicle_types():
+    vehicle_types = list(mongo.db.vehicle_types.find().sort("vehicle_make", 1))
+    return render_template("vehicle_types.html", vehicle_types=vehicle_types)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

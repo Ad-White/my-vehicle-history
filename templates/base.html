@@ -36,6 +36,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('add_new_vehicle') }}">Add New Vehicle</a>
                             </li>
+                            {% if session.user|lower == "admin"|lower %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('get_vehicle_types') }}">Mangage Vehicle Types</a>
+                                </li>
+                            {% endif %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('sign_out') }}">Sign Out</a>
                             </li>
