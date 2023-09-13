@@ -123,6 +123,24 @@ def add_new_vehicle():
 
 @app.route("/edit_vehicle/<vehicle_id>", methods=["GET", "POST"])
 def edit_vehicle(vehicle_id):
+    if request.method == "POST":
+        current_owner = "yes" if request.form.get("current_owner") else "no"
+        show_my_vehicle = "yes" if request.form.get(
+            "show_my_vehicle") else "no"
+        edit_vehicle = {"$set": {
+            "vehicle_type": request.form.get("vehicle_type"),
+            "make": request.form.get("make"),
+            "model": request.form.get("model"),
+            "capacity": request.form.get("capacity"),
+            "year": request.form.get("year"),
+            "colour": request.form.get("colour"),
+            "current_owner": current_owner,
+            "show_my_vehicle": show_my_vehicle,
+            "created_by": session["user"]
+        }}
+        mongo.db.vehicles.update_one({"_id": ObjectId(vehicle_id)}, edit_vehicle)
+        flash("Vehicle Successfully Updated")
+        
     vehicle = mongo.db.vehicles.find_one({"_id": ObjectId(vehicle_id)})
 
     vehicle_types = mongo.db.vehicle_types.find().sort("vehicle_type", 1)
