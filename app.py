@@ -138,7 +138,8 @@ def edit_vehicle(vehicle_id):
             "show_my_vehicle": show_my_vehicle,
             "created_by": session["user"]
         }}
-        mongo.db.vehicles.update_one({"_id": ObjectId(vehicle_id)}, edit_vehicle)
+        mongo.db.vehicles.update_one(
+            {"_id": ObjectId(vehicle_id)}, edit_vehicle)
         flash("Vehicle Successfully Updated")
         
     vehicle = mongo.db.vehicles.find_one({"_id": ObjectId(vehicle_id)})
@@ -146,6 +147,13 @@ def edit_vehicle(vehicle_id):
     vehicle_types = mongo.db.vehicle_types.find().sort("vehicle_type", 1)
     return render_template(
         "edit_vehicle.html", vehicle=vehicle, vehicle_types=vehicle_types)
+
+
+@app.route("/delete_vehicle/<vehicle_id>")
+def delete_vehicle(vehicle_id):
+    mongo.db.vehicles.delete_one({"_id": ObjectId(vehicle_id)})
+    flash("Vehicle Successfully Deleted")
+    return redirect(url_for("get_vehicles"))
 
 
 if __name__ == "__main__":
