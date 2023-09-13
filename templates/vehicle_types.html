@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ vehicle_type.vehicle_type }}</h5>
                         <!-- edit button -->
-                        <a class="btn btn-primary" href="" role="button">Edit <i
+                        <a class="btn btn-primary" href="{{ url_for('edit_vehicle_type', vehicle_type_id=vehicle_type._id) }}" role="button">Edit <i
                                 class="fa-solid fa-pen"></i></a>
                         <!-- delete button -->
                         <a class="btn btn-danger btn-sm" href="" role="button">Delete <i

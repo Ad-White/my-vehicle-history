@@ -175,6 +175,22 @@ def add_vehicle_type():
     return render_template("add_vehicle_types.html")
 
 
+@app.route("/edit_vehicle_type/<vehicle_type_id>", methods=["GET", "POST"])
+def edit_vehicle_type(vehicle_type_id):
+    if request.method == "POST":
+        edit_type = {"$set": {
+            "vehicle_type": request.form.get("vehicle_type")
+        }}
+        mongo.db.vehicle_types.update_one(
+            {"_id": ObjectId(vehicle_type_id)}, edit_type)
+        flash("Vehicle Type Updated")
+        return redirect(url_for("get_vehicle_types"))
+
+    vehicle_type = mongo.db.vehicle_types.find_one(
+        {"_id": ObjectId(vehicle_type_id)})
+    return render_template("edit_vehicle_type.html", vehicle_type=vehicle_type)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
