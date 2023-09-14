@@ -21,7 +21,14 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_vehicles")
 def get_vehicles():
-    vehicles = mongo.db.vehicles.find()
+    vehicles = list(mongo.db.vehicles.find())
+    return render_template("home.html", vehicles=vehicles)
+
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    vehicles = list(mongo.db.vehicles.find({"$text": {"$search": query}}))
     return render_template("home.html", vehicles=vehicles)
 
 

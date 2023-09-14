@@ -3,31 +3,54 @@
     
     <h3>User's Vehicles</h3>
 
-    {% for vehicle in vehicles %}
-        {% if vehicle.show_my_vehicle == "yes" %}
-        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-            <div class="card-body">
-                <h4 class="card-title text-shadow">{{ vehicle.make }}</h4>
-                <h5 class="card-subtitle mb-2 text-body-secondary">{{ vehicle.model }}</h5>
-                <p class="card-text">Engine Capacity: {{ vehicle.capacity }} L</p>
-                <p class="card-text">Colour: {{ vehicle.colour }}</p>
-                <p class="card-text">Year: {{ vehicle.year }}</p>
-                {% if vehicle.current_owner == "yes" %}
-                <p class="card-text">Current Owner: {{ vehicle.current_owner }}
-                    <i class="fa-solid fa-check"></i>
-                </p>
-                {% endif %}
-                <p><em>by: {{ vehicle.created_by }}</em></p>
-                <!-- edit button -->
-                {% if session.user|lower == vehicle.created_by|lower %}
-                    <a class="btn btn-primary" href="{{ url_for('edit_vehicle', vehicle_id=vehicle._id) }}" role="button">Edit <i class="fa-solid fa-pen"></i></a>
-                    <!-- delete button -->
-                    <a class="btn btn-danger btn-sm" href="{{ url_for('delete_vehicle', vehicle_id=vehicle._id) }}" role="button">Delete <i
-                            class="fa-solid fa-pen"></i></a>
-                {% endif %}
-            </div>
+    <div class="row">
+        <div class="col-12"></div>
+            <form action="{{ url_for('search') }}" method="POST">
+                <div class="card-body">
+                    <input type="text" class="text" name="query" id="query" minlength="2" maxlength="50" required>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <label for="query">Search Vehicles</label>
+                </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="col-12">
+                    <a class="btn btn-danger btn-sm" href="{{ url_for('get_vehicles') }}" role="button">Reset</a>
+                </div>
+            </form>
         </div>
-        {% endif %}
-    {% endfor %}
+    </div>
+    
+    {% if vehicles|length > 0 %}
+        {% for vehicle in vehicles %}
+            {% if vehicle.show_my_vehicle == "yes" %}
+                <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="card-body">
+                        <h4 class="card-title text-shadow">{{ vehicle.make }}</h4>
+                        <h5 class="card-subtitle mb-2 text-body-secondary">{{ vehicle.model }}</h5>
+                        <p class="card-text">Engine Capacity: {{ vehicle.capacity }} L</p>
+                        <p class="card-text">Colour: {{ vehicle.colour }}</p>
+                        <p class="card-text">Year: {{ vehicle.year }}</p>
+                        {% if vehicle.current_owner == "yes" %}
+                        <p class="card-text">Current Owner: {{ vehicle.current_owner }}
+                            <i class="fa-solid fa-check"></i>
+                        </p>
+                        {% endif %}
+                        <p><em>by: {{ vehicle.created_by }}</em></p>
+                        <!-- edit button -->
+                        {% if session.user|lower == vehicle.created_by|lower %}
+                            <a class="btn btn-primary" href="{{ url_for('edit_vehicle', vehicle_id=vehicle._id) }}" role="button">Edit <i class="fa-solid fa-pen"></i></a>
+                            <!-- delete button -->
+                            <a class="btn btn-danger btn-sm" href="{{ url_for('delete_vehicle', vehicle_id=vehicle._id) }}" role="button">Delete <i
+                                    class="fa-solid fa-pen"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+    <h3>No Results Found</h3>
+    {% endif %}
 
 {% endblock %}
