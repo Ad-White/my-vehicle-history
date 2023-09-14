@@ -4,21 +4,22 @@
     <h3>User's Vehicles</h3>
 
     <div class="row">
-        <div class="col-12"></div>
-            <form action="{{ url_for('search') }}" method="POST">
-                <div class="card-body">
-                    <input type="text" class="text" name="query" id="query" minlength="2" maxlength="50" required>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <label for="query">Search Vehicles</label>
-                </div>
-                </div>
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-                <div class="col-12">
-                    <a class="btn btn-danger btn-sm" href="{{ url_for('get_vehicles') }}" role="button">Reset</a>
-                </div>
-            </form>
+        <div class="col-12">
+            <div class="card">
+                <form action="{{ url_for('search') }}" method="POST">
+                    <div class="card-body">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="text" name="query" id="query" placeholder="Search Vehicles" minlength="2" maxlength="50" required>
+                        <label for="query"></label>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="col-12">
+                        <a class="btn btn-danger btn-sm" href="{{ url_for('get_vehicles') }}" role="button">Reset</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     
@@ -42,8 +43,7 @@
                         {% if session.user|lower == vehicle.created_by|lower %}
                             <a class="btn btn-primary" href="{{ url_for('edit_vehicle', vehicle_id=vehicle._id) }}" role="button">Edit <i class="fa-solid fa-pen"></i></a>
                             <!-- delete button -->
-                            <a class="btn btn-danger btn-sm" href="{{ url_for('delete_vehicle', vehicle_id=vehicle._id) }}" role="button">Delete <i
-                                    class="fa-solid fa-pen"></i></a>
+                            <a class="btn btn-danger btn-sm" href="{{ url_for('delete_vehicle', vehicle_id=vehicle._id) }}" role="button">Delete <i class="fa-regular fa-circle-xmark"></i></a>
                         {% endif %}
                     </div>
                 </div>

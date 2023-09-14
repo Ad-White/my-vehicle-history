@@ -91,8 +91,10 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
-        return render_template("profile.html", username=username)
-    return redirect(url_for("sign_in"))
+        vehicles = list(mongo.db.vehicles.find())
+        return render_template(
+            "profile.html", username=username, vehicles=vehicles)
+    return redirect(url_for("profile"))
 
 
 @app.route("/sign_out")
