@@ -7,15 +7,12 @@
         <div class="col-12">
             <div class="card">
                 <form action="{{ url_for('search') }}" method="POST">
-                    <div class="card-body">
+                    <div class="card-body" id="search-box">
+                        <p>Search by Vehicle Type, Make or Model....</p>
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" class="text" name="query" id="query" placeholder="Search Vehicles" minlength="2" maxlength="50" required>
                         <label for="query"></label>
-                    </div>
-                    <div class="col-12">
                         <button class="btn btn-primary" type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div>
-                    <div class="col-12">
                         <a class="btn btn-danger btn-sm" href="{{ url_for('get_vehicles') }}" role="button">Reset</a>
                     </div>
                 </form>

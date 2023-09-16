@@ -155,7 +155,7 @@ def edit_vehicle(vehicle_id):
             {"_id": ObjectId(vehicle_id)}, edit_vehicle)
         flash("Vehicle Successfully Updated")
         return redirect(url_for("get_vehicles"))
-        
+
     vehicle = mongo.db.vehicles.find_one({"_id": ObjectId(vehicle_id)})
 
     vehicle_types = mongo.db.vehicle_types.find().sort("vehicle_type", 1)
