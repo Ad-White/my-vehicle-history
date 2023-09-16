@@ -30,7 +30,8 @@
                     <div class="card-body">
                         <h4 class="card-title text-shadow">{{ vehicle.make }}</h4>
                         <h5 class="card-subtitle mb-2 text-body-secondary">{{ vehicle.model }}</h5>
-                        <p class="card-text">Engine Capacity: {{ vehicle.capacity }} L</p>
+                        <p class="card-text">Engine Capacity: {{ vehicle.capacity }}</p>
+                        <p class="card-text">Litre/CC: {{ vehicle.litre_cc }}</p>
                         <p class="card-text">Colour: {{ vehicle.colour }}</p>
                         <p class="card-text">Year: {{ vehicle.year }}</p>
                         {% if vehicle.current_owner == "yes" %}

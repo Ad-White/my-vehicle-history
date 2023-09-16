@@ -24,7 +24,7 @@
                         <i class="fa-solid fa-pen"></i>
                         <label for="make" class="form-label">Vehicle Make</label>
                         <input type="text" class="form-control" id="make" name="make"
-                        minlength="4" maxlength="25" placeholder="Enter make of vehicle..." required>
+                        minlength="2" maxlength="25" placeholder="Enter make of vehicle..." required>
                     </div>
                 </div>
                 <!-- vehicle model -->
@@ -40,9 +40,21 @@
                 <div class="row">
                     <div class="mb-3 col-12">
                         <i class="fa-solid fa-pen"></i>
-                        <label for="capacity" class="form-label">Engine Capacity (Litres/CC)</label>
+                        <label for="capacity" class="form-label">Engine Capacity (e.g. 1.8)</label>
                         <input type="number" class="form-control" id="capacity" name="capacity"
                         min="1" max="9999" step="0.1" value="" required>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="litre_cc" id="litre_cc" value="Litre" checked>
+                        <label class="form-check-label" for="litre_cc">
+                            Litre
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="litre_cc" id="litre_cc" value="CC">
+                        <label class="form-check-label" for="litre_cc">
+                            CC
+                        </label>
                     </div>
                 </div>
                 <!-- year of manufacture -->

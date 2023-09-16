@@ -111,11 +111,13 @@ def add_new_vehicle():
         current_owner = "yes" if request.form.get("current_owner") else "no"
         show_my_vehicle = "yes" if request.form.get(
             "show_my_vehicle") else "no"
+
         vehicle = {
             "vehicle_type": request.form.get("vehicle_type"),
             "make": request.form.get("make"),
             "model": request.form.get("model"),
             "capacity": request.form.get("capacity"),
+            "litre_cc": request.form.get("litre_cc"),
             "year": request.form.get("year"),
             "colour": request.form.get("colour"),
             "current_owner": current_owner,
@@ -136,11 +138,13 @@ def edit_vehicle(vehicle_id):
         current_owner = "yes" if request.form.get("current_owner") else "no"
         show_my_vehicle = "yes" if request.form.get(
             "show_my_vehicle") else "no"
+
         edit_vehicle = {"$set": {
             "vehicle_type": request.form.get("vehicle_type"),
             "make": request.form.get("make"),
             "model": request.form.get("model"),
             "capacity": request.form.get("capacity"),
+            "litre_cc": request.form.get("litre_cc"),
             "year": request.form.get("year"),
             "colour": request.form.get("colour"),
             "current_owner": current_owner,
@@ -150,6 +154,7 @@ def edit_vehicle(vehicle_id):
         mongo.db.vehicles.update_one(
             {"_id": ObjectId(vehicle_id)}, edit_vehicle)
         flash("Vehicle Successfully Updated")
+        return redirect(url_for("get_vehicles"))
         
     vehicle = mongo.db.vehicles.find_one({"_id": ObjectId(vehicle_id)})
 
