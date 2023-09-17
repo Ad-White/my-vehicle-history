@@ -4,6 +4,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
 if os.path.exists("env.py"):
     import env
 
@@ -13,9 +14,12 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
+app.config["UPLOAD_FOLDER"] = "static/uploads/"
 
 
 mongo = PyMongo(app)
+
+ALLOWED_EXTENSIONS = ["png", "jpg", "jpeg", "gif"]
 
 
 @app.route("/")
@@ -112,21 +116,32 @@ def add_new_vehicle():
         show_my_vehicle = "yes" if request.form.get(
             "show_my_vehicle") else "no"
 
-        vehicle = {
-            "vehicle_type": request.form.get("vehicle_type"),
-            "make": request.form.get("make"),
-            "model": request.form.get("model"),
-            "capacity": request.form.get("capacity"),
-            "litre_cc": request.form.get("litre_cc"),
-            "year": request.form.get("year"),
-            "colour": request.form.get("colour"),
-            "current_owner": current_owner,
-            "show_my_vehicle": show_my_vehicle,
-            "created_by": session["user"]
-        }
-        mongo.db.vehicles.insert_one(vehicle)
-        flash("Vehicle Successfully Added")
-        return redirect(url_for("get_vehicles"))
+        image = request.files["image"]
+        description = request.form.get("description")
+        if image and description and image.filename.split(".")[-1].lower() in ALLOWED_EXTENSIONS:
+            filename = secure_filename(image.filename)
+            image.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
+
+            vehicle = {
+                "vehicle_type": request.form.get("vehicle_type"),
+                "make": request.form.get("make"),
+                "model": request.form.get("model"),
+                "capacity": request.form.get("capacity"),
+                "litre_cc": request.form.get("litre_cc"),
+                "year": request.form.get("year"),
+                "colour": request.form.get("colour"),
+                "current_owner": current_owner,
+                "show_my_vehicle": show_my_vehicle,
+                "created_by": session["user"],
+                "image": filename,
+                "description": description.strip()
+            }
+            mongo.db.vehicles.insert_one(vehicle)
+            flash("Vehicle Successfully Added")
+            return redirect(url_for("get_vehicles"))
+        else:
+            flash("An error occurred while uploading the image!")
+            return redirect(url_for("get_vehicles"))
 
     vehicle_types = mongo.db.vehicle_types.find().sort("vehicle_type", 1)
     return render_template("add_new_vehicle.html", vehicle_types=vehicle_types)
