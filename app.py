@@ -154,6 +154,9 @@ def edit_vehicle(vehicle_id):
         show_my_vehicle = "yes" if request.form.get(
             "show_my_vehicle") else "no"
 
+        image = request.files["image"]
+        image_upload = cloudinary.uploader.upload(image)
+
         edit_vehicle = {"$set": {
             "vehicle_type": request.form.get("vehicle_type"),
             "make": request.form.get("make"),
@@ -164,7 +167,9 @@ def edit_vehicle(vehicle_id):
             "colour": request.form.get("colour"),
             "current_owner": current_owner,
             "show_my_vehicle": show_my_vehicle,
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "image_url": image_upload['secure_url'],
+            "description": request.form.get("description").strip()
         }}
         mongo.db.vehicles.update_one(
             {"_id": ObjectId(vehicle_id)}, edit_vehicle)
