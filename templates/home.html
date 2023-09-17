@@ -24,7 +24,7 @@
         {% for vehicle in vehicles %}
             {% if vehicle.show_my_vehicle == "yes" %}
                 <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-                    <img class="card-img-top" src="{{ url_for('static', filename='uploads/' ) }}">
+                    <img class="card-img-top" src="static/uploads/{{ vehicle.filename }}">
                     <div class="card-body"> 
                         <p class="card-text">{{ vehicle.filename }}</p>
                         <p class="card-text">{{ vehicle.description }}</p>

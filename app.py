@@ -133,7 +133,7 @@ def add_new_vehicle():
                 "current_owner": current_owner,
                 "show_my_vehicle": show_my_vehicle,
                 "created_by": session["user"],
-                "image": filename,
+                "filename": filename,
                 "description": description.strip()
             }
             mongo.db.vehicles.insert_one(vehicle)

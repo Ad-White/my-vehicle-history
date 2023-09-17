@@ -17,7 +17,10 @@
             {% for vehicle in vehicles %}
                 {% if session.user|lower == vehicle.created_by|lower %}
                     <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <img class="card-img-top" src="{{ url_for('static', filename = 'uploads/'+vehicle.filename) }}">
                         <div class="card-body">
+                            <p class="card-text">{{ vehicle.filename }}</p>
+                            <p class="card-text">{{ vehicle.description }}</p>
                             <h4 class="card-title text-shadow">{{ vehicle.make }}</h4>
                             <h5 class="card-subtitle mb-2 text-body-secondary">{{ vehicle.model }}</h5>
                             <p class="card-text">Engine Capacity: {{ vehicle.capacity }}</p>
