@@ -27,7 +27,7 @@
                         <i class="fa-solid fa-pen"></i>
                         <label for="make" class="form-label">Vehicle Make</label>
                         <input type="text" class="form-control" id="make" name="make"
-                        minlength="4" maxlength="25" value="{{ vehicle.make }}" placeholder="Enter make of vehicle..." required>
+                        minlength="2" maxlength="25" value="{{ vehicle.make }}" placeholder="Enter make of vehicle..." pattern="^[a-zA-Z0-9]{2,25}$" required>
                     </div>
                 </div>
                 <!-- vehicle model -->
@@ -36,7 +36,7 @@
                         <i class="fa-solid fa-pen"></i>
                         <label for="model" class="form-label">Model</label>
                         <input type="text" class="form-control" id="model" name="model"
-                        placeholder="Enter model..." minlength="1" maxlength="25" value="{{ vehicle.model }}" required>
+                        placeholder="Enter model..." minlength="1" maxlength="25" value="{{ vehicle.model }}" pattern="^[a-zA-Z0-9]{1,25}$" required>
                     </div>
                 </div>
                 <!-- engine capacity -->
@@ -128,11 +128,11 @@
                     <div class="col-lg-6 text-center">
                         <div class="form-group">
                             <label for="image">Choose Image</label>
-                            <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required />
+                            <input type="file" class="form-control-file" id="image" name="image" accept="image/*" value="{ vehicle.img_url }"/>
                         </div>
                         <div class="form-group">
                             <label for="description">Image Description</label>
-                            <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                            <textarea class="form-control" id="description" name="description" rows="4" value="{ vehicle.description}"  max="250" pattern="^[a-zA-Z0-9]$" ></textarea>
                         </div>
                     </div>
                 </div>
