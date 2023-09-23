@@ -29,17 +29,17 @@ cloudinary.config(
 
 
 @app.route("/")
-@app.route("/get_vehicles")
-def get_vehicles():
+@app.route("/show_vehicles")
+def show_vehicles():
     vehicles = list(mongo.db.vehicles.find())
-    return render_template("home.html", vehicles=vehicles)
+    return render_template("show_vehicles.html", vehicles=vehicles)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     vehicles = list(mongo.db.vehicles.find({"$text": {"$search": query}}))
-    return render_template("home.html", vehicles=vehicles)
+    return render_template("show_vehicles.html", vehicles=vehicles)
 
 
 # registration functionality
@@ -141,7 +141,7 @@ def add_new_vehicle():
         }
         mongo.db.vehicles.insert_one(vehicle)
         flash("Vehicle Successfully Added")
-        return redirect(url_for("get_vehicles"))
+        return redirect(url_for("show_vehicles"))
 
     vehicle_types = mongo.db.vehicle_types.find().sort("vehicle_type", 1)
     return render_template("add_new_vehicle.html", vehicle_types=vehicle_types)
@@ -174,7 +174,7 @@ def edit_vehicle(vehicle_id):
         mongo.db.vehicles.update_one(
             {"_id": ObjectId(vehicle_id)}, edit_vehicle)
         flash("Vehicle Successfully Updated")
-        return redirect(url_for("get_vehicles"))
+        return redirect(url_for("show_vehicles"))
 
     vehicle = mongo.db.vehicles.find_one({"_id": ObjectId(vehicle_id)})
 
@@ -187,7 +187,7 @@ def edit_vehicle(vehicle_id):
 def delete_vehicle(vehicle_id):
     mongo.db.vehicles.delete_one({"_id": ObjectId(vehicle_id)})
     flash("Vehicle Successfully Deleted")
-    return redirect(url_for("get_vehicles"))
+    return redirect(url_for("show_vehicles"))
 
 
 @app.route("/get_vehicle_types")

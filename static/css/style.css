@@ -46,13 +46,17 @@ label {
     margin-top: 10px;
 }
 
+.card-title {
+    margin-bottom: 12px;
+}
+
 .card-title, .card-text {
     color: #0a122a;
 }
 
 .card-subtitle {
     color: #0a122a;
-    margin-bottom: 8px;
+    margin-bottom: 19px;
 }
 
 .text-shadow {

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     
-    <h3 class="page-title">User's Vehicles</h3>
+    <h3 class="page-title">Show Vehicles</h3>
 
     <div class="row">
         <div class="col-12">
@@ -13,7 +13,7 @@
                         <input type="text" class="text" name="query" id="query" placeholder="Search Vehicles" minlength="2" maxlength="50" required>
                         <label for="query"></label>
                         <button class="btn add-edit-save-btn" type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
-                        <a class="btn cancel-delete-btn btn-sm" href="{{ url_for('get_vehicles') }}" role="button">Reset</a>
+                        <a class="btn cancel-delete-btn btn-sm" href="{{ url_for('show_vehicles') }}" role="button">Reset</a>
                     </div>
                 </form>
             </div>
@@ -27,8 +27,6 @@
                         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                             <img class="card-img-top" src="{{ vehicle.image_url }}">
                             <div class="card-body"> 
-                                <p class="card-text">{{ vehicle.image_url }}</p>
-                                <p class="card-text">{{ vehicle.description }}</p>
                                 <h4 class="card-title text-shadow">{{ vehicle.make }}</h4>
                                 <h5 class="card-subtitle">{{ vehicle.model }}</h5>
                                 <p class="card-text">Engine Capacity: {{ vehicle.capacity }}</p>
@@ -40,6 +38,7 @@
                                         <i class="fa-solid fa-check"></i>
                                     </p>
                                 {% endif %}
+                                <p class="card-text">Description: {{ vehicle.description }}</p>
                                 <p><em>by: {{ vehicle.created_by }}</em></p>
                                 <!-- edit button -->
                                 {% if session.user|lower == vehicle.created_by|lower %}
