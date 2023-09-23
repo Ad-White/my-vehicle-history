@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3>Edit Vehicle</h3>
+    <h3 class="page-title">Edit Vehicle</h3>
 
         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
             <form class="justify-content-center" method="POST" action="{{ url_for('edit_vehicle', vehicle_id=vehicle._id) }}" enctype="multipart/form-data">
@@ -137,9 +137,9 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- cancel button -->
-                        <a class="btn btn-danger" href="{{ url_for('get_vehicles') }}" role="button">Cancel <i class="fa-regular fa-circle-xmark"></i></a>
+                        <a class="btn cancel-delete-btn" href="{{ url_for('get_vehicles') }}" role="button">Cancel <i class="fa-regular fa-circle-xmark"></i></a>
                         <!-- edit button -->
-                        <button class="btn btn-primary" type="submit">Save Changes <i class="fa-solid fa-pen"></i></button>
+                        <button class="btn add-edit-save-btn" type="submit">Save Changes <i class="fa-solid fa-pen"></i></button>
                     </div>
                 </div>
             </form>

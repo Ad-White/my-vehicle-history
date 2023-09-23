@@ -6,7 +6,7 @@
             <div class="col-6">
                 <div class="card">
                     <div class="card-body ">
-                        <h3>
+                        <h3 class="page-title">
                             {{ username }}'s Profile
                         </h3>
                     </div>
@@ -22,7 +22,7 @@
                             <p class="card-text">{{ vehicle.image_url }}</p>
                             <p class="card-text">{{ vehicle.description }}</p>
                             <h4 class="card-title text-shadow">{{ vehicle.make }}</h4>
-                            <h5 class="card-subtitle mb-2 text-body-secondary">{{ vehicle.model }}</h5>
+                            <h5 class="card-subtitle">{{ vehicle.model }}</h5>
                             <p class="card-text">Engine Capacity: {{ vehicle.capacity }}</p>
                             <p class="card-text">Litre/CC: {{ vehicle.litre_cc }}</p>
                             <p class="card-text">Colour: {{ vehicle.colour }}</p>
@@ -35,10 +35,10 @@
                             <p><em>by: {{ vehicle.created_by }}</em></p>
                             <!-- edit button -->
                             {% if session.user|lower == vehicle.created_by|lower %}
-                                <a class="btn btn-primary" href="{{ url_for('edit_vehicle', vehicle_id=vehicle._id) }}"
+                                <a class="btn add-edit-save-btn" href="{{ url_for('edit_vehicle', vehicle_id=vehicle._id) }}"
                                    role="button">Edit <i class="fa-solid fa-pen"></i></a>
                             <!-- delete button -->
-                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                            <button type="button" class="btn cancel-delete-btn btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">
                                 Delete <i class="fa-regular fa-circle-xmark"></i>
                             </button>
                             
@@ -55,7 +55,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <a class="btn btn-danger" href="{{ url_for('delete_vehicle', vehicle_id=vehicle._id) }}"
+                                            <a class="btn cancel-delete-btn" href="{{ url_for('delete_vehicle', vehicle_id=vehicle._id) }}"
                                                 role="button">Delete <i class="fa-regular fa-circle-xmark"></i></a>
                                         </div>
                                     </div>

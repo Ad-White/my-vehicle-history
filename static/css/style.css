@@ -1,20 +1,70 @@
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Duru+Sans&family=Montserrat:ital,wght@1,600&display=swap');
+
+body {
+    font-family: 'Duru Sans', sans-serif;
+    background-color: #fbfaf8;
+    color: #0a122a;
 }
 
-h3 {
-    text-align: center;
+.logo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navbar {
+    background-color: #004225;
+}
+
+.nav-link {
+    font-family: 'Duru Sans', sans-serif;
 }
 
 .flashes h4 {
+    background-color: #0075a2;
     line-height: 2;
+}
+
+.form-group {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+label {
+    color: #0a122a;
+}
+
+.page-title {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.card-img-top { 
+    max-height: 500px;
+    object-fit: contain;
 }
 
 .card {
     margin-top: 10px;
 }
 
-.form-group {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.card-title, .card-text {
+    color: #0a122a;
+}
+
+.card-subtitle {
+    color: #0a122a;
+    margin-bottom: 8px;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cancel-delete-btn {
+    background-color: #a00005;
+    color: #fbfaf8;
+}
+
+.add-edit-save-btn {
+    background-color: #3066be;
+    color: #fbfaf8;
 }
