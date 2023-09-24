@@ -82,39 +82,47 @@ label {
     margin-bottom: 2%;
 }
 
-
+/* styling related to cards */
+/* sets styling for the card image */
 .card-img-top {
     max-height: 500px;
     object-fit: contain;
 }
 
+/* adds a space at the top of card to help keep separate from any other cards */
 .card {
     margin-top: 10px;
 }
 
+/* adds styling to bring in the card information */
 .card-body {
     margin-left: 5%;
     margin-top: 3%;
 }
 
+/* adds a margin to the bottom of the card title */
 .card-title {
     margin-bottom: 12px;
 }
 
+/* sets the colour of the card title and text */
 .card-title,
 .card-text {
     color: #0a122a;
 }
 
+/* sets the colour and adds a margin to the card subtitle */
 .card-subtitle {
     color: #0a122a;
     margin-bottom: 19px;
 }
 
+/* sets a text shadow effect */
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* adds styling to the buttons used for cancel/delete */
 .cancel-delete-btn {
     background-color: #a00005;
     color: #fbfaf8;
@@ -122,12 +130,7 @@ label {
     margin-bottom: 3%;
 }
 
-.btn:hover {
-    color: #3066be;
-    background-color: #fbfaf8;
-    border-color: #3066be;
-}
-
+/* adds styling to the buttons used for add/edit/save */
 .add-edit-save-btn {
     background-color: #3066be;
     color: #fbfaf8;
@@ -135,12 +138,21 @@ label {
     margin-bottom: 3%;
 }
 
+/* adds styling to buttons above whilst in hover state */
+.btn:hover {
+    color: #3066be;
+    background-color: #fbfaf8;
+    border-color: #3066be;
+}
+
+/* sets the styling used for 'required' info */
 span {
     font-size: 120%;
     color: #a00005;
     margin-bottom: 3%;
 }
 
+/* sets the styling for centering text on the error pages */
 .error-pages {
     text-align: center;
 }
