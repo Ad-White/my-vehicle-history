@@ -86,6 +86,12 @@ label {
     margin-bottom: 3%;
 }
 
+.btn:hover {
+    color: #3066be;
+    background-color: #fbfaf8;
+    border-color: #3066be;
+}
+
 .add-edit-save-btn {
     background-color: #3066be;
     color: #fbfaf8;
