@@ -68,7 +68,7 @@ label {
     margin-bottom: 2%;
 }
 
-.card-img-top { 
+.card-img-top {
     max-height: 500px;
     object-fit: contain;
 }
@@ -86,7 +86,8 @@ label {
     margin-bottom: 12px;
 }
 
-.card-title, .card-text {
+.card-title,
+.card-text {
     color: #0a122a;
 }
 
@@ -125,6 +126,6 @@ span {
     margin-bottom: 3%;
 }
 
-.page-not-found-error {
+.error-pages {
     text-align: center;
 }
