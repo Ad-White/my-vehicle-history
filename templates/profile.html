@@ -12,6 +12,17 @@
                     </div>
                 </div>
             </div>
+            <div class="row message-area">
+                <div class="col-12">
+                    <p>Welcome {{ username }}, this is your Profile page.</p>
+                    <p>Here you will find any vehicles you have added to My Vehicle History.</p>
+                    <p>If you would like other site visitors to be able to appreciate your vehicle on the Show Vehicles page?</p>
+                    <p>Remember to select the option "Show My Vehicle", using the switch provided on the add/edit forms.</p>
+                    <p>To add a new vehicle please use the menu above.</p>
+                    <p>Alternatively, please use this button....</p>
+                    <a class="btn add-edit-save-btn" href="{{ url_for('add_new_vehicle') }}" role="button">Add New Vehicle <i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
         </div>
         <div class="row">
             {% for vehicle in vehicles %}

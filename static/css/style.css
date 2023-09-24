@@ -27,6 +27,11 @@ body {
     text-align: center;
 }
 
+.message-area {
+    margin-top: 2%;
+    text-align: center;
+}
+
 .form-group {
     margin-top: 5px;
     margin-bottom: 5px;
