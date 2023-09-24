@@ -108,7 +108,10 @@
                 <!-- submit button -->
                 <div class="row">
                     <div class="col-12">
-                        <button class="btn add-edit-save-btn" type="submit">Add Vehicle</button>
+                        <button class="btn add-edit-save-btn" type="submit">Add Vehicle <i class="fa-solid fa-plus"></i></button>
+                        <!-- cancel button -->
+                        <a class="btn cancel-delete-btn" href="{{ url_for('show_vehicles') }}" role="button">Cancel <i
+                                class="fa-regular fa-circle-xmark"></i></a>
                     </div>
                     <span>* required info for form submission</span>
                 </div>
