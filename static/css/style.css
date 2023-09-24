@@ -20,6 +20,10 @@ body {
     font-family: 'Duru Sans', sans-serif;
 }
 
+a {
+    color: #3066be;
+}
+
 .flashes h4 {
     background-color: #3066be;
     color: #fbfaf8;
