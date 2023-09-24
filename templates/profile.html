@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-6">
                 <div class="card">
-                    <div class="card-body ">
+                    <div class="card-body">
                         <h3 class="page-title">
                             {{ username }}'s Profile
                         </h3>
@@ -19,8 +19,6 @@
                     <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                         <img class="card-img-top" src="{{ vehicle.image_url }}">
                         <div class="card-body">
-                            <p class="card-text">{{ vehicle.image_url }}</p>
-                            <p class="card-text">{{ vehicle.description }}</p>
                             <h4 class="card-title text-shadow">{{ vehicle.make }}</h4>
                             <h5 class="card-subtitle">{{ vehicle.model }}</h5>
                             <p class="card-text">Engine Capacity: {{ vehicle.capacity }}</p>
@@ -32,6 +30,7 @@
                                     <i class="fa-solid fa-check"></i>
                                 </p>
                             {% endif %}
+                            <p class="card-text">Description: {{ vehicle.description }}</p>
                             <p><em>by: {{ vehicle.created_by }}</em></p>
                             <!-- edit button -->
                             {% if session.user|lower == vehicle.created_by|lower %}
