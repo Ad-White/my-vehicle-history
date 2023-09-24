@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="page-title">Ooops! Sorry Page Not Found</h3>
+
+        <div class="row page-not-found-error">
+            <div class="col-12">
+                <p>Please use this button to take you back...</p>
+                <a class="btn add-edit-save-btn" href="{{ url_for('show_vehicles') }}" role="button">Back To Site</a>
+            </div>
+        </div>
+
+{% endblock %}

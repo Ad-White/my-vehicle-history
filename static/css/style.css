@@ -124,3 +124,7 @@ span {
     color: #a00005;
     margin-bottom: 3%;
 }
+
+.page-not-found-error {
+    text-align: center;
+}
