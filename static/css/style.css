@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Duru+Sans&family=Montserrat:ital,wght@1,600&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
     font-family: 'Duru Sans', sans-serif;
     background-color: #fbfaf8;
@@ -69,6 +75,11 @@ label {
 
 .card {
     margin-top: 10px;
+}
+
+.card-body {
+    margin-left: 5%;
+    margin-top: 3%;
 }
 
 .card-title {
