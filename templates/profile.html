@@ -28,7 +28,7 @@
             {% for vehicle in vehicles %}
                 {% if session.user|lower == vehicle.created_by|lower %}
                     <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-                        <img class="card-img-top" src="{{ vehicle.image_url }}">
+                        <img class="card-img-top" src="{{ vehicle.image_url }}" alt="A photo of a {{ vehicle.make }} {{ vehicle.model }}">
                         <div class="card-body">
                             <h4 class="card-title text-shadow">{{ vehicle.make }}</h4>
                             <h5 class="card-subtitle">{{ vehicle.model }}</h5>
