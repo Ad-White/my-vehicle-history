@@ -31,12 +31,18 @@ cloudinary.config(
 @app.route("/")
 @app.route("/show_vehicles")
 def show_vehicles():
+    """
+    Returns and displays all vehicles from the database
+    """
     vehicles = list(mongo.db.vehicles.find())
     return render_template("show_vehicles.html", vehicles=vehicles)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    Searches for matching resuluts from the query form
+    """
     query = request.form.get("query")
     vehicles = list(mongo.db.vehicles.find({"$text": {"$search": query}}))
     return render_template("show_vehicles.html", vehicles=vehicles)
@@ -45,13 +51,19 @@ def search():
 # registration functionality
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Checks the username against the database for any existing entries.
+    User is notified if there is a match, and asked to try again.
+    If username is accepted, the username and password are stored and
+    a session cookie is created.
+    """
     if request.method == "POST":
         # check if username already exists in database
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Sorry, Username already exists")
+            flash("Sorry, Username already exists. Please try another")
             return redirect(url_for("register"))
 
         register = {
@@ -69,6 +81,12 @@ def register():
 
 @app.route("/sign_in", methods=["GET", "POST"])
 def sign_in():
+    """
+    Checks the existing username and password against the database.
+    If either are invalid the user is notified.
+    If username and password are valid, the user is signed-in
+    to the site.
+    """
     if request.method == "POST":
         # check if username exists in database
         existing_user = mongo.db.users.find_one(
@@ -95,8 +113,25 @@ def sign_in():
     return render_template("sign_in.html")
 
 
+@app.route("/sign_out")
+def sign_out():
+    """
+    The user is signed-out upon request, and notified
+    of the action.
+    The cookie session is destroyed.
+    The user is then returned to the sign-in page.
+    """
+    flash("You have been successfully signed out")
+    session.pop("user")
+    return redirect(url_for("sign_in"))
+
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    Returns and displays all vehicles from the database
+    for the user in session.
+    """
     # get the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -107,16 +142,12 @@ def profile(username):
     return redirect(url_for("profile"))
 
 
-@app.route("/sign_out")
-def sign_out():
-    # remove user from session cookies
-    flash("You have been successfully signed out")
-    session.pop("user")
-    return redirect(url_for("sign_in"))
-
-
 @app.route("/add_new_vehicle", methods=["GET", "POST"])
 def add_new_vehicle():
+    """
+    The user can add new vehicle information and the users
+    own image, using the Cloudinary API, to the database.
+    """
     if request.method == "POST":
         current_owner = "yes" if request.form.get("current_owner") else "no"
         show_my_vehicle = "yes" if request.form.get(
@@ -149,6 +180,11 @@ def add_new_vehicle():
 
 @app.route("/edit_vehicle/<vehicle_id>", methods=["GET", "POST"])
 def edit_vehicle(vehicle_id):
+    """
+    The user can edit any vehicle information and the users
+    own image, using the Cloudinary API, and save changes
+    to the database.
+    """
     if request.method == "POST":
         current_owner = "yes" if request.form.get("current_owner") else "no"
         show_my_vehicle = "yes" if request.form.get(
