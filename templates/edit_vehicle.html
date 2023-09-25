@@ -47,6 +47,7 @@
                         <input type="number" class="form-control" id="capacity" name="capacity"
                         min="0.1" max="9999" step="0.1" value="{{ vehicle.capacity}}" required>
                     </div>
+                    <!-- litres or cc radio buttons -->
                     {% if vehicle.litre_cc == "Litre" %}
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="litre_cc" id="litre_cc" value="Litre" checked>
@@ -128,9 +129,14 @@
                         <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required/>
                     </div>
                     <div class="form-group">
+                        <i class="fa-regular fa-image"></i>
+                        <label for="current_photo">Current Photo</label>
+                        <img class="card-img-top" src="{{ vehicle.image_url }}" alt="A photo of a {{ vehicle.make }} {{ vehicle.model }}">
+                    </div>
+                    <div class="form-group">
                         <i class="fa-solid fa-pen"></i>
-                        <label for="description">Image Description</label><span> * </span>
-                        <textarea class="form-control" id="description" name="description" rows="2" max="25" required></textarea>
+                        <label for="description">Image Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="2" max="200"></textarea>
                     </div>
                 </div>
                 <!-- submit button -->
@@ -139,8 +145,9 @@
                         <!-- cancel button -->
                         <a class="btn cancel-delete-btn" href="{{ url_for('show_vehicles') }}" role="button">Cancel <i class="fa-regular fa-circle-xmark"></i></a>
                         <!-- edit button -->
-                        <button class="btn add-edit-save-btn" type="submit">Save Changes <i class="fa-solid fa-pen"></i></button><span>* required info for form submission</span>
+                        <button class="btn add-edit-save-btn" type="submit">Save Changes <i class="fa-regular fa-floppy-disk"></i></button>
                     </div>
+                    <span>* required info for form submission</span>
                 </div>
             </form>
         </div>
