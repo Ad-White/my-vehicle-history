@@ -133,7 +133,7 @@ def sign_out():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """
-    Returns and displays all vehicles for the user in session 
+    Returns and displays all vehicles for the user in session
     from the database. Displaying on the Profile page.
     """
     username = mongo.db.users.find_one(
