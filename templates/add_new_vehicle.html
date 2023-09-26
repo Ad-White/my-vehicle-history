@@ -74,7 +74,7 @@
                         <i class="fa-solid fa-palette"></i>
                         <label for="colour" class="form-label">Colour</label>
                         <input type="text" class="form-control" id="colour" name="colour" minlength="3" maxlength="20"
-                            placeholder="Enter Colour..." value="">
+                            placeholder="Enter Colour..." value="" pattern="^[a-zA-Z0-9\s]{3,20}$">
                     </div>
                 </div>
                 <!-- current owner switch -->
@@ -100,10 +100,13 @@
                         <label for="image">Add a photo of your vehicle</label><span> * </span>
                         <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required/>
                     </div>
+                </div>
+                <!-- description -->
+                <div class="rwo">
                     <div class="form-group">
                         <i class="fa-solid fa-pen"></i>
-                        <label for="description">Image Description</label>
-                        <textarea class="form-control" id="description" name="description" rows="2" max="200"></textarea>
+                        <label for="description">Description (e.g. Modifications)</label>
+                        <textarea class="form-control" id="description" name="description" rows="4" max="200"></textarea>
                     </div>
                 </div>
                 <!-- submit button -->

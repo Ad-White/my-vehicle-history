@@ -11,7 +11,7 @@
                         <i class="fa-solid fa-pen"></i>
                         <label for="vehicle_type" class="form-label">Edit Vehicle Type...</label>
                         <input type="text" class="form-control" id="vehicle_type" name="vehicle_type"
-                        minlength="3" maxlength="25" value="{{ vehicle_type.vehicle_type }}" required>
+                        minlength="3" maxlength="25" value="{{ vehicle_type.vehicle_type }}" pattern="^[a-zA-Z0-9\s]{3,25}$" required>
                     </div>
                 </div>
                 <!-- save button -->
