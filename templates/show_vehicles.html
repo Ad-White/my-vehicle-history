@@ -9,10 +9,9 @@
             <div class="card">
                 <form action="{{ url_for('search') }}" method="POST">
                     <div class="card-body" id="search-box">
-                        <p>Search by Vehicle Type, Make or Model....</p>
+                        <label for="query">Search by Vehicle Type, Make or Model....</label>
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" class="text" name="query" id="query" placeholder="Search Vehicles" minlength="2" maxlength="50" required>
-                        <label for="query"></label>
                         <button class="btn add-edit-save-btn" type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
                         <a class="btn cancel-delete-btn btn-sm" href="{{ url_for('show_vehicles') }}" role="button">Reset</a>
                     </div>
