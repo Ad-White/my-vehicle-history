@@ -232,3 +232,24 @@ It allows for full CRUD functionality with regards to the vehicle types, used wi
 **Deletion Confirmation**
 
 - As a defensive approach to the possiblity that any of the deletion options on the site are selected by mistake. I have added a modal component to give the user or admin user, a further saftey feature to confirm deletion of the vehicle or vehicle type in question.
+
+### Future Implementations
+
+**Extra Form Inputs**
+
+- Add inputs to get data for horsepower, and torque rating.
+Month and year of purchase?
+Duration of ownership?
+
+**Contact Page**
+
+- Implement Flask Mail. So site user's can contact me with any suggestions. Or report any problems they may be experiencing.
+
+**Ratings System**
+
+- A ratings system for visitors/members to be able to rate each others vehicles. 
+
+**Update Registration Requirements**
+
+- Include email address and confirmation of email address.
+Possibly implement Re-Capture? Google Authentication, etc.
