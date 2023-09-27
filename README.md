@@ -68,19 +68,19 @@ As for the buttons used throughout the site. I decided to use a discordant colou
 - `# 3066BE` - True Blue - Button.
 - `# A00005` - Penn Red - Button.
 
-![screenshot](documentation/mvh_colours.png/)
+![screenshot](documentation/colours/mvh_colours.png/)
 
 ### Typography
 
 I wanted to use two differing but complimenting typfaces. One to be used for the site logo, the other for general use. I wanted to use typefaces that look modern against the 'historical' green in the colour scheme.
 I opted for Montserrat italic for the logo.
 
-- ![screenshot](documentation/montserrat_mvh.png/)
+- ![screenshot](documentation/typography/montserrat_mvh.png/)
 - [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat)
 
  Dosis for all other text.
 
-- ![screenshot](documentation/dosis_mvh.png/)
+- ![screenshot](documentation/typography/dosis_mvh.png/)
 - [Dosis](https://fonts.google.com/specimen/Dosis?query=dosis)
 
 ### Imagery
