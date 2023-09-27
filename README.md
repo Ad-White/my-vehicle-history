@@ -52,3 +52,75 @@ My intention has been to design a website that is visually pleasing, easy to use
 
 - As a site administrator, I should be able to delete any vehicle type.
 
+## Design
+
+### Colour Scheme
+
+I have chosen a colour scheme that I hope gives the site a clean look, and one that is visually appealing to the user.
+I have chosen British Racing Green as the main site colour used for the logo, the navbar and favicon. I hope it portraits a sense of history.
+I opted to use an off white colour called, Seasalt for the background. In order to help emphasis the white colour of the card components on display. Seasalt is also used for any white based text within the site.
+For the main text colour, I choose Oxford Blue in order to maintain a very good contrast to the background colours in use.
+As for the buttons used throughout the site. I decided to use a discordant colour combination. Hopefully making it more intuitive for the user as to what kind of action each may perform. Penn Red and True Blue.
+
+- `# 004225` - British Racing Green - Logo, favicon and navigation.
+- `# 0A122A` - Oxford Blue - General text, headings, labels.
+- `# FBFAF8` - Seasalt - Background colour, text used in logo and favicon.
+- `# 3066BE` - True Blue - Button.
+- `# A00005` - Penn Red - Button.
+
+![screenshot](documentation/mvh_colours.png/)
+
+### Typography
+
+I wanted to use two differing but complimenting typfaces. One to be used for the site logo, the other for general use. I wanted to use typefaces that look modern against the 'historical' green in the colour scheme.
+I opted for Montserrat italic for the logo.
+
+- ![screenshot](documentation/montserrat_mvh.png/)
+- [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat)
+
+ Dosis for all other text.
+
+- ![screenshot](documentation/dosis_mvh.png/)
+- [Dosis](https://fonts.google.com/specimen/Dosis?query=dosis)
+
+### Imagery
+
+All images used throughout this site have been...
+
+## Database Design
+
+My project uses a non-relational database with MongoDB, and therefore the database architecture doesn't have actual relationships like a relational database would.
+
+My database is called **my_vehicle_history**.
+
+It contains 3 collections:
+
+- **vehicle_types**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | vehicle_type | String | |
+
+- **vehicles**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | vehicle_type | String | selected from *vehicle_types* collection |
+    | make | String | |
+    | model | String | |
+    | capacity | String | |
+    | year | String | |
+    | colour | String | |
+    | current_owner | String | |
+    | show_my_vehicle | String | |
+    | description | String | |
+    | image_url | String | |
+    | litres_cc | String | |
+    | created_by | String | selected from the *users* collection |
+
+- **users**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | username | String | |
+    | password | String | uses Secure Hash Algorithm (SHA) |
