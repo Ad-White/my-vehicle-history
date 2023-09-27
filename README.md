@@ -253,3 +253,69 @@ Duration of ownership?
 
 - Include email address and confirmation of email address.
 Possibly implement Re-Capture? Google Authentication, etc.
+
+### Accessibility
+
+I have designed this website with the intention of making it easy for all users to navigate and enjoy.
+I have tried to adhere to current best practices during the production of this website.
+I have tested the website using Google Lighthouse.
+I have also tested the website using WAVE, [Web Accessibility Evaluation](https://my-vehicle-history-451330bb3a9a.herokuapp.com/) to check for any major issues.
+Results from this can be found in the TESTING.md.
+
+## Technologies Used
+
+### Languages Used
+
+Python, HTML and CSS.
+
+### Frameworks, Libraries & Programs Used
+
+- [Google Fonts](https://fonts.google.com) used to import the fonts used within the site.
+- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+- [Python](https://www.python.org) used as the back-end programming language.
+- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
+- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
+- [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
+- [Cloudinary](https://cloudinary.com) used for online static file storage.
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+amiresponsive
+- [GitHub](https://github.com) used for secure online code storage.
+- [Codeanywhere](https://codeanywhere.com/) used as a cloud-based IDE for development.
+- Google Dev Tools - Accessed from Google Chrome.
+
+## Deployment & Local Development
+
+### Deployment
+
+### Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+#### Cloning
+
+You can clone the repository by following these steps:
+
+#### Forking
+
+## Testing
+
+For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+## Credits
+
+### Content
+
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) | entire site | responsive |
+| [W3Schools](https://www.w3schools.com/) | entire site | general resource |
+| [Stackoverflow](https://stackoverflow.com/) | entire site | general resource |
+| [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+
+### Media
+
+All photographs used throughout this site have been added by user's of the site themselves.
+  
+### Acknowledgments
+
+- I would like to acknowledge .....
