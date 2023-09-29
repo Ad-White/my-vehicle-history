@@ -32,18 +32,18 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link {{'active' if active_page=='show_vehicles' else '' }}" aria-current="page" href="{{ url_for('show_vehicles') }}">Show Vehicles</a>
+                            <a class="nav-link {{'active' if active_page=='show_vehicles' else '' }}" aria-current="{{'active' if active_page=='show_vehicles' else '' }}" href="{{ url_for('show_vehicles') }}">Show Vehicles</a>
                         </li>
                         {% if session.user  %}
                             <li class="nav-item">
-                                <a class="nav-link {{'active' if active_page=='profile' else '' }}" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+                                <a class="nav-link {{'active' if active_page=='profile' else '' }}"  aria-current="{{'active' if active_page=='profile' else '' }}" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{'active' if active_page=='add_new_vehicle' else '' }}" href="{{ url_for('add_new_vehicle') }}">Add New Vehicle</a>
+                                <a class="nav-link {{'active' if active_page=='add_new_vehicle' else '' }}" aria-current="{{'active' if active_page=='add_new_vehicle' else '' }}" href="{{ url_for('add_new_vehicle') }}">Add New Vehicle</a>
                             </li>
                             {% if session.user|lower == "admin"|lower %}
                                 <li class="nav-item">
-                                    <a class="nav-link {{'active' if active_page=='vehicle_types' else '' }}" href="{{ url_for('get_vehicle_types') }}">Mangage Vehicle Types</a>
+                                    <a class="nav-link {{'active' if active_page=='vehicle_types' else '' }}"  aria-current="{{'active' if active_page=='vehicle_types' else '' }}" href="{{ url_for('get_vehicle_types') }}">Mangage Vehicle Types</a>
                                 </li>
                             {% endif %}
                             <li class="nav-item">
@@ -51,10 +51,10 @@
                             </li>
                         {% else %}
                             <li class="nav-item">
-                                <a class="nav-link {{'active' if active_page=='sign_in' else '' }}" href="{{ url_for('sign_in') }}">Sign In</a>
+                                <a class="nav-link {{'active' if active_page=='sign_in' else '' }}" aria-current="{{'active' if active_page=='sign_in' else '' }}" href="{{ url_for('sign_in') }}">Sign In</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{'active' if active_page=='register' else '' }}" href="{{ url_for('register') }}">Register</a>
+                                <a class="nav-link {{'active' if active_page=='register' else '' }}" aria-current="{{'active' if active_page=='register' else '' }}" href="{{ url_for('register') }}">Register</a>
                             </li>
                         {% endif %}
                     </ul>
