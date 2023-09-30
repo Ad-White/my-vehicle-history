@@ -19,8 +19,9 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    
         {% if vehicles|length > 0 %}
+        <div class="row">
             {% for vehicle in vehicles %}
                 {% if vehicle.show_my_vehicle == "yes" %}
                     <div class="col-lg-6">
@@ -74,8 +75,9 @@
                     </div>
                 {% endif %}
             {% endfor %}
+        </div>
         {% else %}
-    </div>
+    
     <h3>No Results Found</h3>
     {% endif %}
 {% endblock %}
