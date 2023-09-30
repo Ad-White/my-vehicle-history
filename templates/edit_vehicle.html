@@ -48,36 +48,39 @@
                         min="0.1" max="9999" step="0.1" value="{{ vehicle.capacity}}" required>
                     </div>
                     <!-- litres or cc radio buttons -->
+                    <fieldset>
+                        <legend class="h2 fs-5"><em>Choose Litres or CC</em></legend>
                     {% if vehicle.litre_cc == "Litre" %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="litre_cc" id="litre" value="Litre" checked>
-                        <label class="form-check-label" for="litre">
-                            Litre
-                        </label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="litre_cc" id="litre" value="Litre" checked>
+                            <label class="form-check-label" for="litre">
+                                Litre
+                            </label>
+                        </div>
                     {% else %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="litre_cc" id="litre" value="Litre">
-                        <label class="form-check-label" for="litre">
-                            Litre
-                        </label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="litre_cc" id="litre" value="Litre">
+                            <label class="form-check-label" for="litre">
+                                Litre
+                            </label>
+                        </div>
                     {% endif %}
                     {% if vehicle.litre_cc == "CC" %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="litre_cc" id="cc" value="CC" checked>
-                        <label class="form-check-label" for="cc">
-                            CC
-                        </label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="litre_cc" id="cc" value="CC" checked>
+                            <label class="form-check-label" for="cc">
+                                CC
+                            </label>
+                        </div>
                     {% else %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="litre_cc" id="cc" value="CC">
-                        <label class="form-check-label" for="cc">
-                            CC
-                        </label>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="litre_cc" id="cc" value="CC">
+                            <label class="form-check-label" for="cc">
+                                CC
+                            </label>
+                        </div>
                     {% endif %}
+                    </fieldset>
                 </div>
                 <!-- year of manufacture -->
                 <div class="row">
