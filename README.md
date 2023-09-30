@@ -321,6 +321,7 @@ Python, HTML and CSS.
 - [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
+- [Fontawesome](https://fontawesome.com/) icons used throughout the site.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 amiresponsive
 - [GitHub](https://github.com) used for secure online code storage.
@@ -374,7 +375,7 @@ You can install this project's **requirements** (where applicable) using:
 
 - `pip3 install -r requirements.txt`
 
-If you have your own packages that have been installed, then the requirements file needs updated using:
+If you have your own packages that have been installed, then the requirements file needs updating using:
 
 - `pip3 freeze --local > requirements.txt`
 
@@ -402,7 +403,40 @@ The project should now be connected and deployed to Heroku!
 
 To obtain your own Cloudinary account, sign-up on their site, then follow these steps:
 
+- In the terminal/CLI, `pip install cloudinary`.
+- In the app.py file, `import cloudinary`, `cloudinary.uploader` and `cloudinary.api`.
+- In the `env.py` file, add **CLOUD_NAME, API_KEY and API_SECRET_KEY**.
 
+Sample from `env.py` file:
+
+```
+os.environ.setdefault("CLOUD_NAME", "user's own value")
+os.environ.setdefault("API_KEY", "user's own value")
+os.environ.setdefault("API_SECRET", "user's own value")
+```
+
+Sample from `app.py` file:
+
+```
+# cloudinary configuration settings
+cloudinary.config(
+    cloud_name=os.environ.get("CLOUD_NAME"),
+    api_key=os.environ.get("API_KEY"),
+    api_secret=os.environ.get("API_SECRET")
+)
+```
+Back in the Heroku app, click **Reveal Config Vars** and set these new environment variables.
+
+| Key | Value |
+| --- | --- |
+| `CLOUDINARY_API` | user's own value |
+| `CLOUD_NAME` | user's own value |
+| `API_KEY` | user's own value |
+| `API_SECRET` | user's own value |
+
+Remember to update your requirements file:
+
+- `pip3 freeze --local > requirements.txt`
 
 ### Local Deployment
 
@@ -444,7 +478,8 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 | [W3Schools](https://www.w3schools.com/) | entire site | general resource |
 | [Stackoverflow](https://stackoverflow.com/) | entire site | general resource |
 | [Flask](https://flask.palletsprojects.com) | entire site | general resource |
-| [Cloudinary](https://cloudinary.com) | show vehicles, add and edit image used | general resource
+| [W3Schools](https://www.w3schools.com/) | entire site | general resource |
+| [Cloudinary](https://cloudinary.com) | add and edit image used | general resource
 | [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 
 ### Media
