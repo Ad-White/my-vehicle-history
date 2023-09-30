@@ -18,6 +18,7 @@ Testing By URI:
 Testing by Direct Input:
 
 | Page | Screenshot |
+| --- | --- |
 | Registration | ![screenshot](documentation/html_validation/registration_page.png) |
 | Sign-In | ![screenshot](documentation/html_validation/sign_in_page.png) |
 | Profile | ![screenshot](documentation/html_validation/profile_page.png) |
