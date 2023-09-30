@@ -42,9 +42,9 @@ I tested the my css code by copying and testing by Direct Input.
 
 ### Python and Jinja Syntax
 
-I have used the [CI Python Linter](https://pep8ci.herokuapp.com/) application in order to test my Python and Jinja syntax.
+I have used the [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) application in order to test my Python and Jinja syntax.
 
-| File | Screenshot | Notes |
-| --- | --- | --- |
-| app.py - Inital Test Result | ![screenshot](documentation/python_linter_results/ci_python_linter_first_test.png) | 1 case of trailing whitespace. No newline at end of file |
-| app.py Final Test Result | ![screenshot](documentation/python_linter_results/ci_python_linter_result.png) | All clear, no errors found |
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| app.py - Inital Test Result | --- | ![screenshot](documentation/python_linter_results/ci_python_linter_first_test.png) | 1 case of trailing whitespace. No newline at end of file |
+| app.py Final Test Result | <https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ad-White/my-vehicle-history/main/app.py> | ![screenshot](documentation/python_linter_results/ci_python_linter_result.png) | All clear, no errors found |
