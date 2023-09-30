@@ -33,4 +33,18 @@ Testing by Direct Input:
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file.
+I tested the my css code by copying and testing by Direct Input.
 
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| style.css | ![screenshot](documentation/css_validation/mvh_css_validation.png) | Pass - No Errors Found |
+|  related css warning | ![screenshot](documentation/css_validation/css_warning.png) | 1 Warning: Imported style sheets are not checked in direct input and file upload modes |
+
+### Python and Jinja Syntax
+
+I have used the [CI Python Linter](https://pep8ci.herokuapp.com/) application in order to test my Python and Jinja syntax.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| app.py - Inital Test Result | ![screenshot](documentation/python_linter_results/ci_python_linter_first_test.png) | 1 case of trailing whitespace. No newline at end of file |
+| app.py Final Test Result | ![screenshot](documentation/python_linter_results/ci_python_linter_result.png) | All clear, no errors found |
