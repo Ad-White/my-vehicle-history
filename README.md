@@ -87,6 +87,47 @@ I opted for Montserrat italic for the logo.
 
 All images used throughout this site have been...
 
+## Wireframes
+
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+### Registration Page Wireframes
+
+- ![screenshot](documentation/wireframes/registration.png/)
+
+### Sign-In Page Wireframes
+
+- ![screenshot](documentation/wireframes/sign-in.png/)
+
+### Show Vehicles Page Wireframes
+
+- ![screenshot](documentation/wireframes/show_vehicles.png/)
+
+### Profile Page Wireframes
+
+- ![screenshot](documentation/wireframes/profile.png/)
+
+### Add New Vehicle Page Wireframes
+
+- ![screenshot](documentation/wireframes/add_new_vehicle.png/)
+
+### Edit Vehicle Page Wireframes
+
+- ![screenshot](documentation/wireframes/edit_vehicle.png/)
+
+### Manage Vehicle Types Page Wireframes
+
+- ![screenshot](documentation/wireframes/manage_vehicle_types.png/)
+
+### Add Vehicle Types Page Wireframes
+
+- ![screenshot](documentation/wireframes/add_vehicle_type.png/)
+
+### Edit Vehicle Types Page Wireframes
+
+- ![screenshot](documentation/wireframes/edit_vehicle_type.png/)
+
 ## Database Design
 
 My project uses a non-relational database with MongoDB, and therefore the database architecture doesn't have actual relationships like a relational database would.
