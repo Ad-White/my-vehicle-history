@@ -126,14 +126,13 @@
                     <div class="form-group">
                         <i class="fa-regular fa-image"></i>
                         <label for="image">Add a photo of your vehicle</label><span> * </span>
-                        <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required/>
+                        <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
                     </div>
                 </div>
                 <div class="row">
                     <!-- current photo of vehicle -->
                     <div class="form-group">
-                        <i class="fa-regular fa-image"></i>
-                        <h3 for="current_photo">Current Photo</h3>
+                        <p class="h5"><i class="fa-regular fa-image"></i> Current Photo</p>
                         <img class="card-img-top" src="{{ vehicle.image_url }}" alt="A photo of a {{ vehicle.make }} {{ vehicle.model }}">
                     </div>
                 </div>
@@ -142,7 +141,7 @@
                     <div class="form-group">
                         <i class="fa-solid fa-pen"></i>
                         <label for="description">Description (e.g. Modifications)</label>
-                        <textarea class="form-control" id="description" name="description" rows="4" maxlength="200"></textarea>
+                        <textarea class="form-control" id="description" name="description" rows="4" maxlength="200">{{ vehicle.description }}</textarea>
                     </div>
                 </div>
                 <!-- submit button -->
