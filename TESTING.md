@@ -48,3 +48,13 @@ I have used the [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) applicati
 | --- | --- | --- | --- |
 | app.py - Inital Test Result | --- | ![screenshot](documentation/python_linter_results/ci_python_linter_first_test.png) | 1 case of trailing whitespace. No newline at end of file |
 | app.py - Final Test Result | [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ad-White/my-vehicle-history/main/app.py) | ![screenshot](documentation/python_linter_results/ci_python_linter_result.png) | All clear, no errors found |
+
+## Browser Compatibility
+
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Browser | Register | Sign-In | Profile | Show Vehicles | Add New Vehicle | Edit Vehicle | Manage Vehicle Types | Add Vehicle Type | Edit Vehicle Type | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Chrome | ![screenshot](documentation/desktop_chrome/register_chrome.png) | ![screenshot](documentation/desktop_chrome/sign_in_chrome.png) | ![screenshot](documentation/desktop_chrome/profile_chrome.png) | ![screenshot](documentation/desktop_chrome/show_vehicles_chrome.png) | ![screenshot](documentation/desktop_chrome/add_new_vehicle_chrome.png) | ![screenshot](documentation/desktop_chrome/edit_vehicle_chrome.png) | ![screenshot](documentation/desktop_chrome/manage_vehicle_types_chrome.png) | ![screenshot](documentation/desktop_chrome/add_vehicle_type_chrome.png) | ![screenshot](documentation/desktop_chrome/edit_vehicle_type_chrome.png) | Works as expected |
+| Safari | ![screenshot](documentation/browser-safari.png) | Minor CSS differences |
+| Firefox | ![screenshot](documentation/browser-firefox.png) | Works as expected |
