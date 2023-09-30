@@ -98,7 +98,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Sign-In Page Wireframes
 
-- ![screenshot](documentation/wireframes/sign-in.png/)
+- ![screenshot](documentation/wireframes/sign_in.png/)
 
 ### Show Vehicles Page Wireframes
 
