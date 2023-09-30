@@ -25,7 +25,7 @@ Testing by Direct Input:
 | Show Vehicles | ![screenshot](documentation/html_validation/show_vehicles_page.png) |
 | Add New Vehicle | ![screenshot](documentation/html_validation/add_new_vehicle_page.png) |
 | Edit Vehicle (results - page 1) | ![screenshot](documentation/html_validation/edit_vehicle_page1.png) |
-| Edit Vehicle (results - page 1) | ![screenshot](documentation/html_validation/edit_vehicle_page2.png) |
+| Edit Vehicle (results - page 2) | ![screenshot](documentation/html_validation/edit_vehicle_page2.png) |
 | Manage Vehicle Types | ![screenshot](documentation/html_validation/manage_vehicle_types_page.png) |
 | Add New Vehicle Type | ![screenshot](documentation/html_validation/add_new_vehicle_type.png) |
 | Edit Vehicle Type | ![screenshot](documentation/html_validation/edit_vehicle_type_page.png) |
