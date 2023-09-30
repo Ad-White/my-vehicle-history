@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="page-title">Edit Vehicle Type</h3>
+    <h1 class="page-title fs-3">Edit Vehicle Type</h1>
 
         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
             <form class="justify-content-center" method="POST" action="{{ url_for('edit_vehicle_type', vehicle_type_id=vehicle_type._id) }}">
