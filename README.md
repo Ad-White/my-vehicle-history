@@ -178,6 +178,12 @@ It contains 3 collections:
 	 
 ![screenshot](documentation/mobile_safari/profile_mobile.png)
 
+**Custom Logo**
+
+- A custom logo design for user's to easily identify the website.
+
+![screeshot](documentation/features_logo.png)
+
 **Favicon**
 
 - A custom favicon, making it easy to identify this site alongside others in open tabs within the users browser.
