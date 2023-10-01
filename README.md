@@ -516,4 +516,7 @@ All photographs used throughout this site have been added by either myself or us
   
 ### Acknowledgments
 
-- I would like to acknowledge .....
+- I would like to thank my Code Institute mentor, Rory. For their invaluable feedback, support and encouragement throughout the development of this project.
+- I would like to thank my tutor, Nigel Edwards from the College Of West Anglia, for their guidance, suggestions and assistance at various stages of developing this project.
+- I would like to thank those of my family and friends who have helped to test this application. And providing valuable feedback. But ultimately by adding their vehicles to my site.
+- I would like to thank my partner Chelle, for believing in me, and continuing to support me in making this transition into software development.
