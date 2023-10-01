@@ -158,6 +158,10 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Press the Sign In button with nothing entered into the fields | User is prompted to fill out fields | Pass | |
 | Sign Out | | | | |
 | | Click Sign Out button | Redirects user to the Sign In page | Pass |  |
+| Search Bar | | | | |
+| | Click the search button with an empty field | User is prompted to fill out field | Pass |  |
+| | Enter valid Vehicle Type, Make or Model | Search results are displayed | Pass |  |
+| | Enter invalid Vehicle Type, Make or Model, or other input | Search result displays "Not Found" | Pass |  |
 | Show Vehicles Page | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Show Vehicles link in navbar | Redirection to Show Vehicles page | Pass | |
