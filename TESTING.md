@@ -149,11 +149,13 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Registration button | Redirection to Registration page | Pass | |
 | | Enter valid username | Field will only accept the requested format | Pass | |
 | | Enter already taken username | Flash message to user letting them know the username is already taken | Pass | |
+| | Press the Register button with nothing entered into the fields | User is prompted to fill out fields | Pass | |
 | Sign In | | | | |
 | | Click on Sign In button | Redirection to Sign In page | Pass | |
 | | Enter valid username | Field will only accept the requested format | Pass | |
 | | Enter already taken username | Flash message to user letting them username or password is incorrect | Pass | |
 | | Enter valid password (twice) | Field will only accept password format | Pass | |
+| | Press the Sign In button with nothing entered into the fields | User is prompted to fill out fields | Pass | |
 | Sign Out | | | | |
 | | Click Sign Out button | Redirects user to the Sign In page | Pass |  |
 | Show Vehicles Page | | | | |
@@ -190,3 +192,5 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Enter invalid information into the field and press the Save button | Fields will only accept the requested format | Pass | |
 | | Enter nothing into the field and press the Save button | User is prompted for accepted format | Pass | |
 | | Press the Cancel button | User is redirected back to the Manage Vehicle Types page | Pass | |
+
+## Bugs
