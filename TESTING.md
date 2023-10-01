@@ -130,8 +130,7 @@ I have since attempted to reduce and eliminate any remaining errors and alerts. 
 | As a new site user, I would like to be able to edit the details and image of my vehicle, and to save those changes. | ![screenshot](documentation/crud.png) |
 | As a new site user, I would like the ability to add my own vehicle to the Show Vehicles page, alongside other site member's vehicles. | ![screenshot](documentation/show_vehicle.png) |
 | As a new site user, I would like the ability to not add my own vehicle to the Show Vehicles page, alongside other site member's vehicles. I would prefer if it were kept private to myself. | ![screenshot](documentation/not_show_vehicle.png) |
-| As a new site user, I would like to be able to delete any of my vehicles from my collection if I choose.
- | ![screenshot](documentation/deletion_confirmation.png) |
+| As a new site user, I would like to be able to delete any of my vehicles from my collection if I choose. | ![screenshot](documentation/deletion_confirmation.png) |
 | As a new site user, I would like the ability to sign out of the website. | ![screenshot](documentation/sign_out.png) |
 | As a returning site user, I would like to able to sign back in to the site so that I can see my own profile. | ![screenshot](documentation/returning_sign_in.png) |
 | As a returning site user,  I would like all of the abilities of a new user, so that I can create, edit and delete vehicles from my vehicle history. | ![screenshot](documentation/crud.png) |
