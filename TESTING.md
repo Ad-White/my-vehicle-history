@@ -139,4 +139,44 @@ I have since attempted to reduce and eliminate any remaining errors and alerts. 
 | As a site administrator, I should be able to create new vehicle types to be used within the vehicle types selection options. | ![screenshot](documentation/add_vehicle_type.png) |
 | As a site administrator, I should be able to delete any vehicle type. | ![screenshot](documentation/delete_vehicle_type.png) |
 
+## Defensive Programming
 
+Defensive programming was manually tested with the below user acceptance testing:
+
+| Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| Registration | | | | |
+| | Click on Registration button | Redirection to Registration page | Pass | |
+| | Enter valid username | Field will only accept the requested format | Pass | |
+| | Enter already taken username | Flash message to user letting them know the username is already taken | Pass | |
+| Sign In | | | | |
+| | Click on Sign In button | Redirection to Sign In page | Pass | |
+| | Enter valid username | Field will only accept the requested format | Pass | |
+| | Enter already taken username | Flash message to user letting them username or password is incorrect | Pass | |
+| | Enter valid password (twice) | Field will only accept password format | Pass | |
+| Sign Out | | | | |
+| | Click Sign Out button | Redirects user to the Sign In page | Pass |  |
+| Show Vehicles Page | | | | |
+| | Click on Logo | Redirection to Home page | Pass | |
+| | Click on Show Vehicles link in navbar | Redirection to Show Vehicles page | Pass | |
+| | Click on the Edit button of an existing vehicle for current user | User will be redirected to the Edit Vehicle page | Pass | |
+| | Click on the Delete button of an existing vehicle for current user | User will be asked to confirm deletion or can cancel | Pass | |
+| Profile | | | | |
+| | Click on Profile button | User will be redirected to the Profile page | Pass | |
+| | Click on the Add New Vehicle button | User will be redirected to the Add New Vehicle page | Pass | |
+| | Click on the Edit button of an existing vehicle | User will be redirected to the Edit Vehicle page | Pass | |
+| | Click on the Delete button of an existing vehicle for current user | User will be asked to confirm deletion or can cancel | Pass | |
+| | Brute forcing the URL to get to another user's profile | Redirects user back to own profile | Pass |  |
+| Add New Vehicle | | | | |
+| | Enter valid information in all fields and press Add Vehicle button | New Vehicle is saved to database. Flash message to confirm saved vehicle. Redirect to Show Vehicles page  | Pass | |
+| | Enter invalid information in any field and press Add Vehicle button | Fields will only accept the requested format | Pass | |
+| | Enter valid information in all fields, but not the required fields and press Add Vehicle button | User is prompted by each individual field for accepted format | Pass | |
+| Edit Vehicle | | | | |
+| | Enter valid information in all fields and press Save button | Vehicle's new information is saved to database. Flash message to confirm saved vehicle. Redirect to Show Vehicles page  | Pass | |
+| | Enter invalid information in any field and press Save button | Fields will only accept the requested format | Pass | |
+| | Enter valid information in all fields, but not the required fields and press Save button | User is prompted by each individual field for accepted format | Pass | |
+| Manage Vehicle Types | | | | |
+| | Press the Create Vehicle Type button | Redirects admin to the Add New Vehicle Type page | Pass | |
+| | Press the Edit Vehicle Type button | Redirects admin to the Edit Vehicle Type page | Pass | |
+| | Press the Delete button of Vehicle Type | Prompts admin to confirm deletion, or cancel | Pass | |
+| | Press the Delete button of Vehicle Type and confirm deletion | Deletion occurs and admin is shown flash message of deletion confirmed and redirected to the Manage Vehicles page | Pass | |
