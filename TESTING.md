@@ -195,7 +195,7 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## Bugs
 
-Throughout developing this application, I have used Google Dev Tools to help pinpoint any errors.
+Throughout developing this application, I have used Google Dev Tools to help pinpoint any errors. I have tested the deployed site as well, for functionality during development.
 
 - Bug 1:
 
@@ -218,7 +218,13 @@ I conducted more research and after some time it occured to me to try what I hav
 
 - Bug 5:
 
-This bug was something I had noticed on my mobile device. With an open tab, alongside all my other tabs. If I had left the site whilst signed in, and later return. I was recieving the error shown below.
+This bug was something I had noticed on my mobile device. With an open tab, alongside all my other tabs. If I had left the site whilst signed in, and later return. I was recieving the error shown below. I expected it to have something to do with loosing the cookie for the signed in user?
+I have taken the course of action to apply a `try` `except` clause around the sign_in function with the hope that the user will be re-directed to the Sign_In page.
 
 ![screenshot](documentation/key_error.png)
 
+- Bug 6:
+
+This relates to the errors being reported through HTML validation by direct input with regards to the modals used within the site.
+Duplication of modal ID's. And my attempts to fix it. I have tried to take a programmatic approach to this, as the results from the database are within a loop. I have tried to make the ID's unique by attaching the `
+After some research and trialing, I found that 
