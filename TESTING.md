@@ -99,3 +99,22 @@ These are the results after inital testing. Testing conducted for both Navigatio
 | Snapshot | Manage Vehicle Types | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_manage_vehicle_types.png) | --- |
 | Snapshot | Add Vehicle Type | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_add_vehicle_type.png) | --- |
 | Snapshot | Edit Vehicle Type | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_edit_vehicle_type.png) | --- |
+
+### WAVE Reports
+
+I have tested the website using WAVE, [Web Accessibility Evaluation](https://my-vehicle-history-451330bb3a9a.herokuapp.com/) to check for any major issues.
+These are the results after inital testing.
+
+| Page | Screenshot | Notes |
+| --- | --- | --- |
+| Registration | ![screenshot](documentation/wave_reports/wave_register.png) | No Errors. 2 alerts related to `<h1>` tag not present and Arai-Current Page Selection |
+| Sign_In | ![screenshot](documentation/wave_reports/wave_sign_in.png) | No errors. 3 alerts related to `<h1>` tag not present and Arai-Current Page Selection. Register Account link |
+| Profile | --- | Would not allow testing |
+| Show Vehicles | ![screenshot](documentation/wave_reports/wave_show_vehicles.png) | No Errors. 2 alerts related to `<h1>` tag not present and Arai-Current Page Selection |
+| Add Vehicle | ![screenshot](documentation/wave_reports/wave_add_vehicle.png) | No errors. 2 alerts related to `<h1>` tag not present and Arai-Current Page Selection |
+| Edit Vehicle | ![screenshot](documentation/wave_reports/wave_edit_vehicle.png) | 2 errors, related to radio selectors having same ID. 4 alerts, `<h1>` tag not present and Arai-Current Page Selection. The other 2 related to the radio selectors |
+| Manage Vehicle Types | ![screenshot](documentation/wave_reports/wave_manage_vehicle_types.png) | No errors. 7 alerts related to heading tag hierachy |
+| Add Vehicle Type | ![screenshot](documentation/wave_reports/wave_add_vehicle_type.png) | 2 errors, related to radio selectors having same ID. 3 alerts, `<h1>` tag not present and Arai-Current Page Selection. |
+| Edit Vehicle Type | ![screenshot](documentation/wave_reports/wave_edit_vehicle_type.png) | No errors. 2 alerts related to `<h1>` tag not present and Arai-Current Page Selection |
+
+
