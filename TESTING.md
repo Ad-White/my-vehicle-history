@@ -194,3 +194,31 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Press the Cancel button | User is redirected back to the Manage Vehicle Types page | Pass | |
 
 ## Bugs
+
+Throughout developing this application, I have used Google Dev Tools to help pinpoint any errors.
+
+- Bug 1:
+
+Most of my errors have been as a result of my own doing, e.g. Typo's, misplaced Tags, etc.
+The results from testing the HTML is a good example of where I discovered these. On a couple of occasions were I had added code like a new `<div>`, I had missed that the IDE had closed the tag for me without me noticing. So a few of the errors and warning were erradicated by my going back over my code and finding and correcting these.
+
+- Bug 2:
+
+During testing using the Dev Tool and testing for responsiveness. I noticed I was getting some overflow on the page. I took action to fix this, by researching that I could take control of the viewport and stop any scaling, which at the time seemed to work as a cure. However, this would cause further issues relating to user's of assisted technology.  Also, during later testing it would re-appear. So, I assumed my cure hadn't actually worked. I therefore reverted back to my original code.
+Whilst testing on real devices I have not seen this come back to date. My thoughts now are perhaps it was something to do with the Dev Tool itself?
+
+- Bug 3:
+
+Having implemented the Bootstrap Navigation Menu fairly early on. I had failed to realise until a later time, the menu failed to keep track with the "active" page I was on. I have taken steps to fix this programmatically, by adding a variable to each page, `{% set active_page = 'profile' %}`. And back in the base.html file adding this to each nav link - `<a class="nav-link {{'active' if active_page=='show_vehicles' else '' }}"`. Changing the `active_page` name accordingly.
+
+- Bug 4:
+
+Bug 4 relates to Bug 3. Whilst conducting tests of each page using the WAVE accessability tool. It was brought to my attention that the problem I had with Bug 3, also effected the result associated with regards to assisted technology. The link didn't move as different pages were viewed. I tried many attempts to fix this. The most successful being through taking a similar approach to Bug 3. This did seem to work, when inspecting the page source. As the `aria-current` page did change and track itself correctly. However, when re-running WAVE tests it still showed as an issue and threw errors in HTML testing as well. Not happy!
+I conducted more research and after some time it occured to me to try what I have now implemented. As in replace the `else '' `, with `else 'false' `. This has fixed the HTML errors I was recieving. Yet I am still getting a warning with the WAVE test results.
+
+- Bug 5:
+
+This bug was something I had noticed on my mobile device. With an open tab, alongside all my other tabs. If I had left the site whilst signed in, and later return. I was recieving the error shown below.
+
+![screenshot](documentation/key_error.png)
+
