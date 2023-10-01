@@ -198,7 +198,7 @@ If the username and or password do not pass validation, a message is given to th
 Upon username and password validation, an account is created for the user. This allows the user access to their own account, and they are taken to their Profile page.
 The Registration page also contains a message to the user with link to follow, in case they have already registered.
 
-![screenshot](documentation/deskop_chrome/register_chrome.png)
+![screenshot](documentation/desktop_chrome/register_chrome.png)
 
 **Sign-In and Sign-Out Functionality**
 
@@ -207,7 +207,7 @@ Upon the user submitting their username and password. The details are checked ag
 If validation is passed, the user has access to their account and is taken to the Profile page, in order to view their own vehicles.
 The user can sign-out of their account whenever they wish, by using the Sign-Out option, found in the navigation menu. A message is provided to let the user know they have successfully signed out, as they are returned to the Sign-In page.
 
-![screenshot](documentation/deskop_chrome/sign_in_chrome.png)
+![screenshot](documentation/desktop_chrome/sign_in_chrome.png)
 
 **Navigation Menu**
 
@@ -219,14 +219,14 @@ The user can sign-out of their account whenever they wish, by using the Sign-Out
 
 - By using backend technology, this application features all the functionality of CRUD. Giving user's the ability to create a new vehicle to upload to the database. The ability to view the vehicle, either within their own Profile page and/or the Show Vehicles page. The user can edit any of the vehicles they have uploaded to the site. Lastly, the user can delete any of their vehicles.
 
-![screenshot](documentation/deskop_chrome/add_new_vehicle_chrome.png)
+![screenshot](documentation/desktop_chrome/add_new_vehicle_chrome.png)
 
 **Show Vehicles Page**
 
 - The Show Vehicles features a collection of all vehicles that existing member's of the site would like to show. To anyone visiting the site, and other site member's to appreciate. This option is available via a switch on the add/edit vehicle pages.
 As a signed-in user, you can find your own 'Show Vehicles' listed here with others. Any of the user's own vehicles displayed will also contain two buttons. One to edit, the other to delete the current vehicle.
 
-![screenshot](documentation/deskop_firefox/show_vehicles_firefox.png)
+![screenshot](documentation/desktop_firefox/show_vehicles_firefox.png)
 
 **Profile Page**
 
@@ -236,7 +236,7 @@ A message is also displayed which contains a personalised reference to the user 
 Any vehicles already stored by the user are shown below the message area at the top of the page.
 Each of the vehicle's returned to be displayed contain two buttons. One to edit, the other to delete the current vehicle.
 
-![screenshot](documentation/deskop_safari/profile_safari.png)
+![screenshot](documentation/desktop_safari/profile_safari.png)
 
 **Add Vehicle Page**
 
@@ -269,7 +269,7 @@ Through implementing the file storage service, using the API from Cloudinary. Th
 - In addition there features two buttons at the end of the form.
 A blue coloured button for form submission called, "Add Vehicle". To add the information to the database. The other, a red coloured button named, "Cancel". Incase the user changes their mind.
 
-![screenshot](documentation/deskop_firefox/add_new_vehicle_firefox.png)
+![screenshot](documentation/desktop_firefox/add_new_vehicle_firefox.png)
 
 **Edit Vehicle Page**
 
@@ -289,7 +289,7 @@ This feature allows the user the ability to update any information already held 
 - This application allows for Administrative Access. As a registered user with admin credentials, you can access the site to perform any changes to the vehicle types used within the Vehicle Types Selector on both the Add New Vehicle and Edit Vehicle pages.
 The admin user is greeted with a message stating that they are signed-in as an administrator.
 
-![screenshot](documentation/desktop_chrome/signed_in_admins_profile.png.png)
+![screenshot](documentation/desktop_chrome/signed_in_admins_profile.png)
 
 **Manage Vehicle Types**
 
