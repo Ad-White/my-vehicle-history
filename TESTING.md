@@ -118,3 +118,18 @@ These are the results after inital testing.
 | Edit Vehicle Type | ![screenshot](documentation/wave_reports/wave_edit_vehicle_type.png) | No errors. 2 alerts related to `<h1>` tag not present and Arai-Current Page Selection |
 
 I have since attempted to reduce and eliminate any remaining errors and alerts. See the Bugs and Issues section for more information.
+
+## User Story Testing
+
+| User Story | Screenshot |
+| --- | --- |
+| As a new site user, I would like to view a selection of vehicles consisting of those presented by the existing member's of the website. | ![screenshot](documentation/show_vehicles.png) |
+| As a new site user,  I would like to be able to preform a search through the vehicles on the Show Vehicles page by either, make, model or vehicle type. | ![screenshot](documentation/search_bar.png) |
+| As a new site user, I would like to be able to have a way to easily navigate my way around the site. | ![screenshot](documentation/navigation_system.png)  |
+| As a new site user,  I would like to register as a new site member, and have access to my own profile area. With the ability to be able to upload details of my vehicle, including an image of my vehicle. | ![screenshot](documentation/user_story_profile.png) |
+| As a new site user, I would like to be able to edit the details and image of my vehicle, and to save those changes. | ![screenshot](documentation/crud.png) |
+| As a new site user, I would like the ability to add my own vehicle to the Show Vehicles page, alongside other site member's vehicles. | ![screenshot](documentation/show_vehicle.png) |
+| As a new site user, I would like the ability to not add my own vehicle to the Show Vehicles page, alongside other site member's vehicles. I would prefer if it were kept private to myself. | ![screenshot](documentation/not_show_vehicle.png) |
+| As a new site user, I would like to be able to delete any of my vehicles from my collection if I choose.
+ | ![screenshot](documentation/deletion_confirmation.png) |
+| As a new site user, I would like the ability to sign out of the website. | ![screenshot](documentation/sign_out.png) |
