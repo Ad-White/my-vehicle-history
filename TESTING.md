@@ -180,3 +180,13 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Press the Edit Vehicle Type button | Redirects admin to the Edit Vehicle Type page | Pass | |
 | | Press the Delete button of Vehicle Type | Prompts admin to confirm deletion, or cancel | Pass | |
 | | Press the Delete button of Vehicle Type and confirm deletion | Deletion occurs and admin is shown flash message of deletion confirmed and redirected to the Manage Vehicles page | Pass | |
+| Add New Vehicle Type | | | | |
+| | Enter valid information in the form field and press the Save button | New Vehicle Type is saved to database. Flash message to confirm saved vehicle type. Redirect to Manage Vehicle Types page  | Pass | |
+| | Enter invalid information into the field and press the Save button | Fields will only accept the requested format | Pass | |
+| | Enter nothing into the field and press the Save button | User is prompted for accepted format | Pass | |
+| | Press the Cancel button | User is redirected back to the Manage Vehicle Types page | Pass | |
+| Edit Vehicle Type | | | | |
+| | Enter valid information in the form field and press the Save button | Edited Vehicle Type is saved to database. Flash message to confirm saved vehicle type. Redirect to Manage Vehicle Types page  | Pass | |
+| | Enter invalid information into the field and press the Save button | Fields will only accept the requested format | Pass | |
+| | Enter nothing into the field and press the Save button | User is prompted for accepted format | Pass | |
+| | Press the Cancel button | User is redirected back to the Manage Vehicle Types page | Pass | |
