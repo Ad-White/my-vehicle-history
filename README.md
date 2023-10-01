@@ -176,7 +176,7 @@ It contains 3 collections:
 
 - A mobile first, responsive design to help provide site users with a similar experience across a range of web browsers and devices.
 	 
-![screenshot](documentation/moblile_safari/profile_mobile.png)
+![screenshot](documentation/mobile_safari/profile_mobile.png)
 
 **Favicon**
 
