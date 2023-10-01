@@ -219,14 +219,14 @@ The user can sign-out of their account whenever they wish, by using the Sign-Out
 
 - By using backend technology, this application features all the functionality of CRUD. Giving user's the ability to create a new vehicle to upload to the database. The ability to view the vehicle, either within their own Profile page and/or the Show Vehicles page. The user can edit any of the vehicles they have uploaded to the site. Lastly, the user can delete any of their vehicles.
 
-![screenshot](documentation/desktop_chrome/add_new_vehicle_chrome.png)
+![screenshot](documentation/crud.png)
 
 **Show Vehicles Page**
 
 - The Show Vehicles features a collection of all vehicles that existing member's of the site would like to show. To anyone visiting the site, and other site member's to appreciate. This option is available via a switch on the add/edit vehicle pages.
 As a signed-in user, you can find your own 'Show Vehicles' listed here with others. Any of the user's own vehicles displayed will also contain two buttons. One to edit, the other to delete the current vehicle.
 
-![screenshot](documentation/desktop_firefox/show_vehicles_firefox.png)
+![screenshot](documentation/show_vehicles.png)
 
 **Profile Page**
 
@@ -269,7 +269,7 @@ Through implementing the file storage service, using the API from Cloudinary. Th
 - In addition there features two buttons at the end of the form.
 A blue coloured button for form submission called, "Add Vehicle". To add the information to the database. The other, a red coloured button named, "Cancel". Incase the user changes their mind.
 
-![screenshot](documentation/desktop_firefox/add_new_vehicle_firefox.png)
+![screenshot](documentation/add_new_vehicle.png)
 
 **Edit Vehicle Page**
 
