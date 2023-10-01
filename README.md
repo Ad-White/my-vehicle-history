@@ -176,13 +176,13 @@ It contains 3 collections:
 
 - A mobile first, responsive design to help provide site users with a similar experience across a range of web browsers and devices.
 	 
-![screenshot](documentation/)
+![screenshot](documentation/moblile_safari/profile_mobile.png)
 
 **Favicon**
 
 - A custom favicon, making it easy to identify this site alongside others in open tabs within the users browser.
 
-![screenshot](documentation/)
+![screenshot](documentation/desktop_firefox/features_favicon.png)
 
 **Registration System**
 
