@@ -478,7 +478,7 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 | [W3Schools](https://www.w3schools.com/) | entire site | general resource |
 | [Stackoverflow](https://stackoverflow.com/) | entire site | general resource |
 | [Flask](https://flask.palletsprojects.com) | entire site | general resource |
-| [W3Schools](https://www.w3schools.com/) | entire site | general resource |
+| [Mozilla For Developers](https://developer.mozilla.org/en-US/docs/Web/) | arai related issue with navbar | general resource |
 | [Cloudinary](https://cloudinary.com) | add and edit image used | general resource
 | [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 

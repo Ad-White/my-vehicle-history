@@ -68,3 +68,34 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Mobile |  ![screenshot](documentation/mobile_safari/register_mobile.png) | ![screenshot](documentation/mobile_safari/sign_in_mobile.png) | ![screenshot](documentation/mobile_safari/profile_mobile.png) | ![screenshot](documentation/mobile_safari/show_vehicles_mobile.png) | ![screenshot](documentation/mobile_safari/add_new_vehicle_mobile.png) | ![screenshot](documentation/mobile_safari/edit_vehicle_mobile.png) | ![screenshot](documentation/mobile_safari/manage_vehicle_types_mobile.png) |  ![screenshot](documentation/mobile_safari/add_vehicle_type_mobile.png) | ![screenshot](documentation/mobile_safari/edit_vehicle_type_mobile.png) | Works as expected |
 | Tablet |  ![screenshot](documentation/tablet_chrome/register_tablet.png) | ![screenshot](documentation/tablet_chrome/sign_in_tablet.png) | ![screenshot](documentation/tablet_chrome/profile_tablet.png) | ![screenshot](documentation/tablet_chrome/show_vehicles_tablet.png) | ![screenshot](documentation/tablet_chrome/add_new_vehicle_tablet.png) | ![screenshot](documentation/tablet_chrome/edit_vehicle_tablet.png) | ![screenshot](documentation/tablet_chrome/manage_vehicle_types_tablet.png) |  ![screenshot](documentation/tablet_chrome/add_vehicle_type_tablet.png) | ![screenshot](documentation/tablet_chrome/edit_vehicle_type_tablet.png) | Works as expected |
 | Desktop | ![screenshot](documentation/desktop_chrome/register_chrome.png) | ![screenshot](documentation/desktop_chrome/sign_in_chrome.png) | ![screenshot](documentation/desktop_chrome/profile_chrome.png) | ![screenshot](documentation/desktop_chrome/show_vehicles_chrome.png) | ![screenshot](documentation/desktop_chrome/add_new_vehicle_chrome.png) | ![screenshot](documentation/desktop_chrome/edit_vehicle_chrome.png) | ![screenshot](documentation/desktop_chrome/manage_vehicle_types_chrome.png) | ![screenshot](documentation/desktop_chrome/add_vehicle_type_chrome.png) | ![screenshot](documentation/desktop_chrome/edit_vehicle_type_chrome.png) | Works as expected |
+
+## Lighthouse Audit
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+These are the results after inital testing. Testing conducted for both Navigation and Snapshots on mobile and desktop.
+
+| Test Used | Page | Size | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| Navigation | --- | Mobile | ![screenshot](documentation/lighthouse_reports/navigation_reports/lighthouse_navigation_report_mobile.png) | Performance related issues regarding handling of images. ARIA IDs are not unique (modal related). Issues were logged in the Issues panel in Chrome Devtools, related to cloudinary images used. |
+| Navigation | --- | Desktop | ![screenshot](documentation/lighthouse_reports/navigation_reports/lighthouse_navigation_report_desktop.png) | Performance related issues regarding handling of images. ARIA IDs are not unique (modal related). Issues were logged in the Issues panel in Chrome Devtools, related to cloudinary images used. |
+
+| Test Used | Page | Size | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| Snapshot | Registration | Mobile| ![screenshot](documentation/lighthouse_reports/snapshot_reports_mobile/lighthouse_snapshot_register.png) | --- |
+| Snapshot | Sign-In | Mobile |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_mobile/lighthouse_snapshot_sign_in.png) | --- |
+| Snapshot | Profile | Mobile |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_mobile/lighthouse_snapshot_profile.png) | --- |
+| Snapshot | Show Vehicles | Mobile |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_mobile/lighthouse_snapshot_show_vehicles.png) | --- |
+| Snapshot | Add New Vehicle | Mobile |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_mobile/lighthouse_snapshot_add_new_vehicle.png) | --- |
+| Snapshot | Edit Vehicle | Mobile |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_mobile/lighthouse_snapshot_edit_vehicle.png) | --- |
+| Snapshot | Manage Vehicle Types | Mobile |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_mobile/lighthouse_snapshot_manage_vehicle_types.png) | --- |
+| Snapshot | Add Vehicle Type | Mobile |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_mobile/lighthouse_snapshot_add_vehicle_type.png) | --- |
+| Snapshot | Edit Vehicle Type | Mobile |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_mobile/lighthouse_snapshot_edit_vehicle_type.png) | --- |
+| Snapshot | Registration | Desktop | ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_register.png) | --- |
+| Snapshot | Sign-In | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_sign_in.png) | --- |
+| Snapshot | Profile | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_profile.png) | --- |
+| Snapshot | Show Vehicles | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_show_vehicles.png) | --- |
+| Snapshot | Add New Vehicle | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_add_new_vehicle.png) | --- |
+| Snapshot | Edit Vehicle | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_edit_vehicle.png) | --- |
+| Snapshot | Manage Vehicle Types | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_manage_vehicle_types.png) | --- |
+| Snapshot | Add Vehicle Type | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_add_vehicle_type.png) | --- |
+| Snapshot | Edit Vehicle Type | Desktop |  ![screenshot](documentation/lighthouse_reports/snapshot_reports_desktop/lighthouse_snapshot_edit_vehicle_type.png) | --- |
