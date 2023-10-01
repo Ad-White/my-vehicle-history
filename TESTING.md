@@ -33,7 +33,7 @@ Testing by Direct Input:
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file.
-I tested the my css code by copying and testing by Direct Input.
+I tested my css code by copying and testing by Direct Input.
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
@@ -124,7 +124,7 @@ I have since attempted to reduce and eliminate any remaining errors and alerts. 
 | User Story | Screenshot |
 | --- | --- |
 | As a new site user, I would like to view a selection of vehicles consisting of those presented by the existing member's of the website. | ![screenshot](documentation/show_vehicles.png) |
-| As a new site user,  I would like to be able to preform a search through the vehicles on the Show Vehicles page by either, make, model or vehicle type. | ![screenshot](documentation/search_bar.png) |
+| As a new site user,  I would like to be able to perform a search through the vehicles on the Show Vehicles page by either, make, model or vehicle type. | ![screenshot](documentation/search_bar.png) |
 | As a new site user, I would like to be able to have a way to easily navigate my way around the site. | ![screenshot](documentation/navigation_system.png)  |
 | As a new site user,  I would like to register as a new site member, and have access to my own profile area. With the ability to be able to upload details of my vehicle, including an image of my vehicle. | ![screenshot](documentation/user_story_profile.png) |
 | As a new site user, I would like to be able to edit the details and image of my vehicle, and to save those changes. | ![screenshot](documentation/crud.png) |
@@ -134,7 +134,7 @@ I have since attempted to reduce and eliminate any remaining errors and alerts. 
 | As a new site user, I would like the ability to sign out of the website. | ![screenshot](documentation/sign_out.png) |
 | As a returning site user, I would like to able to sign back in to the site so that I can see my own profile. | ![screenshot](documentation/returning_sign_in.png) |
 | As a returning site user,  I would like all of the abilities of a new user, so that I can create, edit and delete vehicles from my vehicle history. | ![screenshot](documentation/crud.png) |
-| As a site administrator, I should be able to sign-in to the website and have more priviledges than a general user. | ![screenshot](documentation/manage_vehicle_types.png) |
+| As a site administrator, I should be able to sign-in to the website and have more privileges than a general user. | ![screenshot](documentation/manage_vehicle_types.png) |
 | As a site administrator,  I should be able to edit the names used for the vehicle types selection options. | ![screenshot](documentation/edit_vehicle_type.png) |
 | As a site administrator, I should be able to create new vehicle types to be used within the vehicle types selection options. | ![screenshot](documentation/add_vehicle_type.png) |
 | As a site administrator, I should be able to delete any vehicle type. | ![screenshot](documentation/delete_vehicle_type.png) |
@@ -200,7 +200,7 @@ Throughout developing this application, I have used Google Dev Tools to help pin
 - Bug 1:
 
 Most of my errors have been as a result of my own doing, e.g. Typo's, misplaced Tags, etc.
-The results from testing the HTML is a good example of where I discovered these. On a couple of occasions were I had added code like a new `<div>`, I had missed that the IDE had closed the tag for me without me noticing. So a few of the errors and warning were erradicated by my going back over my code and finding and correcting these.
+The results from testing the HTML is a good example of where I discovered these. On a couple of occasions where I had added code like a new `<div>`, I had missed that the IDE had closed the tag for me without me noticing. So a few of the errors and warning were erradicated by my going back over my code and finding and correcting these.
 
 - Bug 2:
 
@@ -213,12 +213,12 @@ Having implemented the Bootstrap Navigation Menu fairly early on. I had failed t
 
 - Bug 4:
 
-Bug 4 relates to Bug 3. Whilst conducting tests of each page using the WAVE accessability tool. It was brought to my attention that the problem I had with Bug 3, also effected the result associated with regards to assisted technology. The link didn't move as different pages were viewed. I tried many attempts to fix this. The most successful being through taking a similar approach to Bug 3. This did seem to work, when inspecting the page source. As the `aria-current` page did change and track itself correctly. However, when re-running WAVE tests it still showed as an issue and threw errors in HTML testing as well. Not happy!
+Bug 4 relates to Bug 3. Whilst conducting tests of each page using the WAVE accessibility tool. It was brought to my attention that the problem I had with Bug 3, also effected the result associated with regards to assisted technology. The link didn't move as different pages were viewed. I tried many attempts to fix this. The most successful being through taking a similar approach to Bug 3. This did seem to work, when inspecting the page source. As the `aria-current` page did change and track itself correctly. However, when re-running WAVE tests it still showed as an issue and threw errors in HTML testing as well. Not happy!
 I conducted more research and after some time it occured to me to try what I have now implemented. As in replace the `else '' `, with `else 'false' `. This has fixed the HTML errors I was recieving. Yet I am still getting a warning with the WAVE test results.
 
 - Bug 5:
 
-This bug was something I had noticed on my mobile device. With an open tab, alongside all my other tabs. If I had left the site whilst signed in, and later return. I was recieving the error shown below. I expected it to have something to do with loosing the cookie for the signed in user?
+This bug was something I had noticed on my mobile device. With an open tab, alongside all my other tabs. If I had left the site whilst signed in, and later return. I was recieving the error shown below. I expected it to have something to do with losing the cookie for the signed in user?
 I have taken the course of action to apply a `try` `except` clause around the sign_in function with the hope that the user will be re-directed to the Sign_In page.
 
 ![screenshot](documentation/key_error.png)

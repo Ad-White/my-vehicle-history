@@ -46,7 +46,7 @@ My intention has been to design a website that is visually pleasing, easy to use
 
 ### Site Administrator
 
-- As a site administrator, I should be able to sign-in to the website and have more priviledges than a general user.
+- As a site administrator, I should be able to sign-in to the website and have more privileges than a general user.
 
 - As a site administrator, I should be able to edit the names used for the vehicle types selection options.
 
