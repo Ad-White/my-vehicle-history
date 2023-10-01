@@ -296,7 +296,7 @@ The admin user is greeted with a message stating that they are signed-in as an a
 - This feature is only accessable if you are signed-in as the site Administrator.
 It allows for full CRUD functionality with regards to the vehicle types, used within the selector on the Add New Vehicle and Edit Vehicle pages.
 
-![screenshot](documentation/manage_vehicles_admin.png)
+![screenshot](documentation/manage_vehicle_types.png)
 
 **Deletion Confirmation**
 
