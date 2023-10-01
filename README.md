@@ -333,7 +333,7 @@ I have designed this website with the intention of making it easy for all users 
 I have tried to adhere to current best practices during the production of this website.
 I have tested the website using Google Lighthouse.
 I have also tested the website using WAVE, [Web Accessibility Evaluation](https://my-vehicle-history-451330bb3a9a.herokuapp.com/) to check for any major issues.
-Results from this can be found in the TESTING.md.
+Results from this can be found in the [TESTING.md](TESTING.md).
 
 ## Technologies Used
 
