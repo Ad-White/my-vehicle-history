@@ -91,30 +91,34 @@ def sign_in():
     If username and password are valid, the user is signed-in
     to the site.
     """
-    if request.method == "POST":
-        # check if username exists in database
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+    try:
+        if request.method == "POST":
+            # check if username exists in database
+            existing_user = mongo.db.users.find_one(
+                {"username": request.form.get("username").lower()})
 
-        if existing_user:
-            # check that hashed password matches user input
-            if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(
-                    request.form.get("username")))
-                return redirect(url_for(
-                    "profile", username=session["user"]))
+            if existing_user:
+                # check that hashed password matches user input
+                if check_password_hash(
+                        existing_user["password"], request.form.get(
+                            "password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(
+                        request.form.get("username")))
+                    return redirect(url_for(
+                        "profile", username=session["user"]))
+                else:
+                    # invalid password match
+                    flash("Incorrect Username and/or Password")
+                    return redirect(url_for("sign_in"))
             else:
-                # invalid password match
+                # username doesn't exist
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("sign_in"))
-        else:
-            # username doesn't exist
-            flash("Incorrect Username and/or Password")
-            return redirect(url_for("sign_in"))
 
-    return render_template("sign_in.html")
+        return render_template("sign_in.html")
+    except Exception as e:
+        return redirect(url_for("sign_in"))
 
 
 @app.route("/sign_out")
