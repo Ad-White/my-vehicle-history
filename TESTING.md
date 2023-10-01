@@ -226,5 +226,44 @@ I have taken the course of action to apply a `try` `except` clause around the si
 - Bug 6:
 
 This relates to the errors being reported through HTML validation by direct input with regards to the modals used within the site.
-Duplication of modal ID's. And my attempts to fix it. I have tried to take a programmatic approach to this, as the results from the database are within a loop. I have tried to make the ID's unique by attaching the `
-After some research and trialing, I found that 
+Duplication of modal ID's. And my attempts to fix it. I have tried to take a programmatic approach to this, as the results from the database are within a loop. In the process of this I have successfully managed to break my delete functionality by accident, on a number of occasions.
+The delete functionality now works, although when testing through direct input in the HTML Validator, it still has this as an issue. Even though validating by URI shows no errors.
+
+- Bug 7:
+
+Not so much a bug, more an issue with performance when testing through Lighthouse. Issues are reported in the console, which is negatively affecting the score, but they appear to all be linked to Cloudinary and the images being returned.
+
+## Fixed Bugs
+
+- Bug 1:
+
+I have been through all the reported issues from the HTML validation, such as trailing slash on void elements. Section lacking heading, bad attribute for `src` on element `img`. Unclosed end tags, and stray end tags. These are no longer being reported.
+
+- Bug 2:
+
+Overflow issue to date has not appeared whilst testing using mobile or desktop.
+
+- Bug 3:
+
+Issue with Navigation Menu has not failed to show the correct page link since I added the code described above.
+
+## Unfixed Bugs
+
+- Bug 4:
+
+For the time being bug 4 remains. I am currently in the process of researching a solution.
+
+- Bug 5:
+
+To date this keeps occuring, despite my attempts. I will research further. Until then, I am hopeful that the 500 response page will take care of it, if it occurs after 'debug' has been switched off.
+
+- Bug 6:
+
+The duplicate ID's are still reported. I will not give up on this!! Further research is required on my part.
+As an alternative to using the modals in the way I am. The solution could be to hand the modal over to a JavaScript file to be actioned on pressing the 'delete' button.
+
+- Bug 7:
+
+Performance related issues regarding the returned images from Cloudinary. This is my first go at using the Cloudinary API, therefore I will endeavour to continue developing my knowledge of this API in order to gain a solution.
+
+There are no remaining bugs that I am aware of.
