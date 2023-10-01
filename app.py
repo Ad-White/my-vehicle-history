@@ -117,7 +117,7 @@ def sign_in():
                 return redirect(url_for("sign_in"))
 
         return render_template("sign_in.html")
-    except Exception as e:
+    except ValueError:
         return redirect(url_for("sign_in"))
 
 
