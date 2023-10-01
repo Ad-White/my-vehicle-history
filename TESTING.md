@@ -108,7 +108,7 @@ These are the results after inital testing.
 | Page | Screenshot | Notes |
 | --- | --- | --- |
 | Registration | ![screenshot](documentation/wave_reports/wave_register.png) | No Errors. 2 alerts related to `<h1>` tag not present and Arai-Current Page Selection |
-| Sign_In | ![screenshot](documentation/wave_reports/wave_sign_in.png) | No errors. 3 alerts related to `<h1>` tag not present and Arai-Current Page Selection. Register Account link |
+| Sign_In | ![screenshot](documentation/wave_reports/wave_sign_in.png) | No errors. 3 alerts related to `<h1>` tag not present and Arai-Current Page Selection. Register Account link - Adjacent links go to the same URL. |
 | Profile | --- | Would not allow testing |
 | Show Vehicles | ![screenshot](documentation/wave_reports/wave_show_vehicles.png) | No Errors. 2 alerts related to `<h1>` tag not present and Arai-Current Page Selection |
 | Add Vehicle | ![screenshot](documentation/wave_reports/wave_add_vehicle.png) | No errors. 2 alerts related to `<h1>` tag not present and Arai-Current Page Selection |
@@ -117,4 +117,4 @@ These are the results after inital testing.
 | Add Vehicle Type | ![screenshot](documentation/wave_reports/wave_add_vehicle_type.png) | 2 errors, related to radio selectors having same ID. 3 alerts, `<h1>` tag not present and Arai-Current Page Selection. |
 | Edit Vehicle Type | ![screenshot](documentation/wave_reports/wave_edit_vehicle_type.png) | No errors. 2 alerts related to `<h1>` tag not present and Arai-Current Page Selection |
 
-
+I have since attempted to reduce and eliminate any remaining errors and alerts. See the Bugs and Issues section for more information.
