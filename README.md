@@ -198,7 +198,7 @@ If the username and or password do not pass validation, a message is given to th
 Upon username and password validation, an account is created for the user. This allows the user access to their own account, and they are taken to their Profile page.
 The Registration page also contains a message to the user with link to follow, in case they have already registered.
 
-![screenshot](documentation/)
+![screenshot](documentation/deskop_chrome/register_chrome.png)
 
 **Sign-In and Sign-Out Functionality**
 
@@ -207,18 +207,26 @@ Upon the user submitting their username and password. The details are checked ag
 If validation is passed, the user has access to their account and is taken to the Profile page, in order to view their own vehicles.
 The user can sign-out of their account whenever they wish, by using the Sign-Out option, found in the navigation menu. A message is provided to let the user know they have successfully signed out, as they are returned to the Sign-In page.
 
+![screenshot](documentation/deskop_chrome/sign_in_chrome.png)
+
 **Navigation Menu**
 
 - An easy to use navigation system for user's to travel between site areas. Implemented via Bootstrap 5, I have customised the colours used, and provided the functionality for the menu options to highlight with regard to the page the user is currently viewing.
+
+![screenshot](documentation/navigation_system.png)
 
 **Full CRUD Functionality**
 
 - By using backend technology, this application features all the functionality of CRUD. Giving user's the ability to create a new vehicle to upload to the database. The ability to view the vehicle, either within their own Profile page and/or the Show Vehicles page. The user can edit any of the vehicles they have uploaded to the site. Lastly, the user can delete any of their vehicles.
 
+![screenshot](documentation/deskop_chrome/add_new_vehicle_chrome.png)
+
 **Show Vehicles Page**
 
 - The Show Vehicles features a collection of all vehicles that existing member's of the site would like to show. To anyone visiting the site, and other site member's to appreciate. This option is available via a switch on the add/edit vehicle pages.
 As a signed-in user, you can find your own 'Show Vehicles' listed here with others. Any of the user's own vehicles displayed will also contain two buttons. One to edit, the other to delete the current vehicle.
+
+![screenshot](documentation/deskop_firefox/show_vehicles_firefox.png)
 
 **Profile Page**
 
@@ -227,6 +235,8 @@ Upon signing in, the user's registered username is displayed within a card eleme
 A message is also displayed which contains a personalised reference to the user via their registered username.
 Any vehicles already stored by the user are shown below the message area at the top of the page.
 Each of the vehicle's returned to be displayed contain two buttons. One to edit, the other to delete the current vehicle.
+
+![screenshot](documentation/deskop_safari/profile_safari.png)
 
 **Add Vehicle Page**
 
@@ -259,28 +269,40 @@ Through implementing the file storage service, using the API from Cloudinary. Th
 - In addition there features two buttons at the end of the form.
 A blue coloured button for form submission called, "Add Vehicle". To add the information to the database. The other, a red coloured button named, "Cancel". Incase the user changes their mind.
 
+![screenshot](documentation/deskop_firefox/add_new_vehicle_firefox.png)
+
 **Edit Vehicle Page**
 
 - The Edit Vehicle page features all of the form inputs as used within the Add New Vehicle page. These come pre-populated with any matching data found within the database.
 This feature allows the user the ability to update any information already held about a particular vehicle of theirs.
 
+![screenshot](documentation/mobile_safari/edit_vehicle_mobile.png)
+
 **Search Box**
 
 - The search for vehicle functionality appears at the top of the Show Vehicles page. It allows users to search the database for vehicles by type, make or model from the vehicles made available using the 'Show My Vehicle' option.
+
+![screenshot](documentation/search_bar.png)
 
 **Administration Access**
 
 - This application allows for Administrative Access. As a registered user with admin credentials, you can access the site to perform any changes to the vehicle types used within the Vehicle Types Selector on both the Add New Vehicle and Edit Vehicle pages.
 The admin user is greeted with a message stating that they are signed-in as an administrator.
 
+![screenshot](documentation/desktop_chrome/signed_in_admins_profile.png.png)
+
 **Manage Vehicle Types**
 
 - This feature is only accessable if you are signed-in as the site Administrator.
 It allows for full CRUD functionality with regards to the vehicle types, used within the selector on the Add New Vehicle and Edit Vehicle pages.
 
+![screenshot](documentation/manage_vehicles_admin.png)
+
 **Deletion Confirmation**
 
 - As a defensive approach to the possiblity that any of the deletion options on the site are selected by mistake. I have added a modal component to give the user or admin user, a further saftey feature to confirm deletion of the vehicle or vehicle type in question.
+
+![screenshot](documentation/deletion_confirmation.png)
 
 ### Future Implementations
 
