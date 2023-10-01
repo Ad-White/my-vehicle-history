@@ -1,6 +1,6 @@
 # My Vehicle History
 
-- ![screenshot](documentation/mvh_site_image.png/)
+![screenshot](documentation/mvh_site_image.png/)
 
 The purpose of this website is to provide users with somewhere to keep a log of their vehicles. Whether currently and/or previously owned.
 With this application I hope to provide a solution to the real world case, I have experienced myself over the years. With regards to people I have met or know, who are enthusiastic about their own vehicles.
@@ -22,7 +22,7 @@ My intention has been to design a website that is visually pleasing, easy to use
 
 - As a new site user, I would like to view a selection of vehicles consisting of those presented by the existing member's of the website.
 
-- As a new site user, I would like to be able to preform a search through the vehicles on the Show Vehicles page by either, make, model or vehicle type.
+- As a new site user, I would like to be able to perform a search through the vehicles on the Show Vehicles page by either, make, model or vehicle type.
 
 - As a new site user, I would like to be able to have a way to easily navigate my way around the site.
 
@@ -59,8 +59,8 @@ My intention has been to design a website that is visually pleasing, easy to use
 ### Colour Scheme
 
 I have chosen a colour scheme that I hope gives the site a clean look, and one that is visually appealing to the user.
-I have chosen British Racing Green as the main site colour used for the logo, the navbar and favicon. I hope it portraits a sense of history.
-I opted to use an off white colour called, Seasalt for the background. In order to help emphasis the white colour of the card components on display. Seasalt is also used for any white based text within the site.
+I have chosen British Racing Green as the main site colour used for the logo, the navbar and favicon. I hope it portrays a sense of history.
+I opted to use an off white colour called Seasalt for the background. In order to help emphasis the white colour of the card components on display. Seasalt is also used for any white based text within the site.
 For the main text colour, I choose Oxford Blue in order to maintain a very good contrast to the background colours in use.
 As for the buttons used throughout the site. I decided to use a discordant colour combination. Hopefully making it more intuitive for the user as to what kind of action each may perform. Penn Red and True Blue.
 
@@ -74,7 +74,7 @@ As for the buttons used throughout the site. I decided to use a discordant colou
 
 ### Typography
 
-I wanted to use two differing but complimenting typfaces. One to be used for the site logo, the other for general use. I wanted to use typefaces that look modern against the 'historical' green in the colour scheme.
+I wanted to use two differing but complimenting typefaces. One to be used for the site logo, the other for general use. I wanted to use typefaces that look modern against the 'historical' green in the colour scheme.
 I opted for Montserrat italic for the logo.
 
 - ![screenshot](documentation/typography/montserrat_mvh.png/)
@@ -205,7 +205,7 @@ The Registration page also contains a message to the user with link to follow, i
 **Sign-In and Sign-Out Functionality**
 
 - The user can sign-in to their account in order to add, view, edit or delete any vehicles.
-Upon the user submitting their username and password. The details are checked against those already held in the database. The password held within the database is hashed using a 256bit encyription algorithm. If the username and or password do not pass validation, a message is given to the user that either, the username and/or password is incorrect.
+Upon the user submitting their username and password. The details are checked against those already held in the database. The password held within the database is hashed using a 256 bit encryption algorithm. If the username and or password do not pass validation, a message is given to the user that either, the username and/or password is incorrect.
 If validation is passed, the user has access to their account and is taken to the Profile page, in order to view their own vehicles.
 The user can sign-out of their account whenever they wish, by using the Sign-Out option, found in the navigation menu. A message is provided to let the user know they have successfully signed out, as they are returned to the Sign-In page.
 
@@ -251,7 +251,7 @@ The Make input restricts names to a minimum of 2 characters (e.g. MG), and a max
 
 - The Model input restricts names to a minimum of 1 characters (e.g. Model 'T' Ford), and a maximum of 25. This also features a pattern match using a regular expression, to allow for A-Z upper and lower case, 0-9 and whitespace.
 
-- The Engine Capacity is a number input type. Only allowing for numbers between, 0.1 and 9999. And can be incremented by a step of 0.1. This to allow for an engine capacity of 0.5 Litres, as an example.
+- The Engine Capacity is a number input type. Only allowing for numbers between, 0.1 and 9999. And can be incremented by a step of 0.1. This is to allow for an engine capacity of 0.5 Litres, as an example.
 
 - This form also features a couple of radio button selectors. To allow the user to choose between Litres or Cylinder Capacity. In order to have a better reference to the Engine Capacity, above. This is pre-defined to the option of Litres.
 
@@ -295,14 +295,14 @@ The admin user is greeted with a message stating that they are signed-in as an a
 
 **Manage Vehicle Types**
 
-- This feature is only accessable if you are signed-in as the site Administrator.
+- This feature is only accessible if you are signed-in as the site Administrator.
 It allows for full CRUD functionality with regards to the vehicle types, used within the selector on the Add New Vehicle and Edit Vehicle pages.
 
 ![screenshot](documentation/manage_vehicle_types.png)
 
 **Deletion Confirmation**
 
-- As a defensive approach to the possiblity that any of the deletion options on the site are selected by mistake. I have added a modal component to give the user or admin user, a further saftey feature to confirm deletion of the vehicle or vehicle type in question.
+- As a defensive approach to the possiblity that any of the deletion options on the site are selected by mistake. I have added a modal component to give the user or admin user, a further safety feature to confirm deletion of the vehicle or vehicle type in question.
 
 ![screenshot](documentation/deletion_confirmation.png)
 
@@ -351,6 +351,7 @@ Python, HTML and CSS.
 - [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
+- [Coolors](https://coolors.co/) used to help generate colour chart.
 - [Fontawesome](https://fontawesome.com/) icons used throughout the site.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 amiresponsive
