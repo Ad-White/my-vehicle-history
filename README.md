@@ -236,7 +236,7 @@ A message is also displayed which contains a personalised reference to the user 
 Any vehicles already stored by the user are shown below the message area at the top of the page.
 Each of the vehicle's returned to be displayed contain two buttons. One to edit, the other to delete the current vehicle.
 
-![screenshot](documentation/desktop_safari/profile_safari.png)
+![screenshot](documentation/mobile_safari/profile_safari.png)
 
 **Add Vehicle Page**
 
